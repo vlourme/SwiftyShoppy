@@ -14,6 +14,7 @@
 		1B076BD424A9F22F00C6EFBB /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B076BD324A9F22F00C6EFBB /* Order.swift */; };
 		1B508B0524A9FD46000D4A21 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B508B0424A9FD46000D4A21 /* Errors.swift */; };
 		1B7AD25424AA359400C01B25 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AD25324AA359400C01B25 /* Keys.plist */; };
+		1B7AD25A24AA43D700C01B25 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AD25924AA43D700C01B25 /* LICENCE */; };
 		1B8F2D3324A9129900668E7A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F2D3224A9129900668E7A /* API.swift */; };
 		1B8F2D3B24A9134200668E7A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8F2D3A24A9134200668E7A /* Moya */; };
 		1B8F2D4424A916B000668E7A /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F2D4324A916B000668E7A /* Tests.swift */; };
@@ -50,6 +51,10 @@
 		1B076BD324A9F22F00C6EFBB /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		1B508B0424A9FD46000D4A21 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		1B7AD25324AA359400C01B25 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		1B7AD25524AA41AA00C01B25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1B7AD25724AA420C00C01B25 /* SwiftyShoppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwiftyShoppy.png; path = ../../../../Desktop/SwiftyShoppy.png; sourceTree = "<group>"; };
+		1B7AD25824AA420C00C01B25 /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Board.png; path = ../../../../Desktop/Board.png; sourceTree = "<group>"; };
+		1B7AD25924AA43D700C01B25 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		1B8F2D2F24A9129900668E7A /* libSwiftyShoppy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftyShoppy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8F2D3224A9129900668E7A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1B8F2D3C24A9153C00668E7A /* orders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
@@ -120,9 +125,21 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1B7AD25624AA41DA00C01B25 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				1B7AD25824AA420C00C01B25 /* Board.png */,
+				1B7AD25724AA420C00C01B25 /* SwiftyShoppy.png */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		1B8F2D2624A9129900668E7A = {
 			isa = PBXGroup;
 			children = (
+				1B7AD25924AA43D700C01B25 /* LICENCE */,
+				1B7AD25624AA41DA00C01B25 /* Media */,
+				1B7AD25524AA41AA00C01B25 /* README.md */,
 				1B8F2D3124A9129900668E7A /* ShoppyAPI */,
 				1B8F2D4224A916B000668E7A /* Tests */,
 				1B8F2D3024A9129900668E7A /* Products */,
@@ -247,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B7AD25A24AA43D700C01B25 /* LICENCE in Resources */,
 				1B7AD25424AA359400C01B25 /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
