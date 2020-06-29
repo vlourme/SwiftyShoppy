@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ShoppyAPI.xcodeproj">
+      location = "self:/Users/vico/Documents/DevSwift/ShoppyAPI/SwiftyShoppy.xcodeproj">
    </FileRef>
 </Workspace>
