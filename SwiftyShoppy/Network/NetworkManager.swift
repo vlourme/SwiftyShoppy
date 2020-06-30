@@ -9,11 +9,11 @@
 import Foundation
 import Moya
 
-public struct NetworkManager: Networkable {
+public struct NetworkManager {
     ///
     /// Constructor
     ///
-    init(token: String) {
+    public init(token: String) {
         // Generate provider with token
         provider = MoyaProvider<Shoppy>(plugins: [
             NetworkLoggerPlugin(),
@@ -39,7 +39,7 @@ public struct NetworkManager: Networkable {
     /// Get analytics
     /// - returns: Analytic object or Error
     ///
-    func getAnalytics(completion: @escaping (Analytics?, Error?) -> ()) {
+    public func getAnalytics(completion: @escaping (Analytics?, Error?) -> ()) {
         provider.request(.getAnalytics) { response in
             switch response {
             case .failure(let error):
@@ -62,7 +62,7 @@ public struct NetworkManager: Networkable {
     /// Get an specific order
     /// - returns: Order object or Error
     ///
-    func getOrder(id: String, completion: @escaping (Order?, Error?) -> ()) {
+    public func getOrder(id: String, completion: @escaping (Order?, Error?) -> ()) {
         provider.request(.getOrder(id: id)) { response in
             switch response {
             case .failure(let error):
@@ -85,7 +85,7 @@ public struct NetworkManager: Networkable {
     /// Get orders
     /// - returns: Order array or Error
     ///
-    func getOrders(completion: @escaping ([Order]?, Error?) -> ()) {
+    public func getOrders(completion: @escaping ([Order]?, Error?) -> ()) {
         provider.request(.showOrders) { response in
             switch response {
             case .failure(let error):

@@ -5,7 +5,7 @@
 //  Created by Victor Lourme on 30/06/2020.
 //
 
-struct Analytics: Codable {
+public struct Analytics: Codable {
     ///
     /// Identifiers
     ///

@@ -32,7 +32,6 @@
 		OBJ_44 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Order.swift */; };
 		OBJ_45 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Product.swift */; };
 		OBJ_47 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* NetworkManager.swift */; };
-		OBJ_48 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Networkable.swift */; };
 		OBJ_55 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_66 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Tests.swift */; };
 		OBJ_68 /* SwiftyShoppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyShoppy::SwiftyShoppy::Product" /* SwiftyShoppy.framework */; };
@@ -65,7 +64,6 @@
 		OBJ_17 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		OBJ_18 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		OBJ_21 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		OBJ_23 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		OBJ_26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_27 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		OBJ_31 /* Media */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Media; sourceTree = SOURCE_ROOT; };
@@ -133,14 +131,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		OBJ_22 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_23 /* Networkable.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		OBJ_24 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +180,6 @@
 				OBJ_12 /* Helpers */,
 				OBJ_15 /* Models */,
 				OBJ_19 /* Network */,
-				OBJ_22 /* Protocols */,
 			);
 			path = SwiftyShoppy;
 			sourceTree = SOURCE_ROOT;
@@ -294,7 +283,6 @@
 				OBJ_45 /* Product.swift in Sources */,
 				OBJ_47 /* NetworkManager.swift in Sources */,
 				1BB764C224AB67CB00C7F63A /* Analytics.swift in Sources */,
-				OBJ_48 /* Networkable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

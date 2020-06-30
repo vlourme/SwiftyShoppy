@@ -11,7 +11,7 @@ import Foundation
 ///
 /// Order structure
 ///
-struct Order: Codable {
+public struct Order: Codable {
     ///
     /// Identifiers
     ///

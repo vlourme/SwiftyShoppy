@@ -11,7 +11,7 @@ import Foundation
 ///
 /// Product model
 ///
-struct Product: Codable {
+public struct Product: Codable {
     ///
     /// Identifiers
     ///
@@ -59,7 +59,7 @@ struct Product: Codable {
     ///
     /// Init
     ///
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         // Decode type mismatch
