@@ -9,5 +9,8 @@
 import Foundation
 
 enum Shoppy {
+    ///
+    /// Orders
+    ///
     case showOrders
 }
