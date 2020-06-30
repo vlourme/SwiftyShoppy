@@ -14,7 +14,7 @@ SwiftyShoppy can be installed via Swift Package Manager.
 
 ### Install from XCode
 1. Select `File / Swift Package / Add package dependency` from the menu
-2. Paste `https://github.com/vlourme/SwiftyShoppy.git``
+2. Paste `https://github.com/vlourme/SwiftyShoppy.git`
 3. Follow the steps
 
 ### Install for a package
