@@ -57,6 +57,7 @@
 		1B7AD25824AA420C00C01B25 /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Board.png; path = ../../../../Desktop/Board.png; sourceTree = "<group>"; };
 		1B7AD25924AA43D700C01B25 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		1B7AD25C24AB348600C01B25 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1B7AD25E24AB394B00C01B25 /* order.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
 		1B8F2D2F24A9129900668E7A /* libSwiftyShoppy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftyShoppy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8F2D3224A9129900668E7A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1B8F2D3C24A9153C00668E7A /* orders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				1B8F2D3C24A9153C00668E7A /* orders.json */,
+				1B7AD25E24AB394B00C01B25 /* order.json */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
