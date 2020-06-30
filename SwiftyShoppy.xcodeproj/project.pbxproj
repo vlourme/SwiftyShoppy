@@ -173,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Sources */,
+				OBJ_8 /* SwiftyShoppy */,
 				OBJ_24 /* Tests */,
 				OBJ_28 /* Products */,
 				OBJ_31 /* Media */,
@@ -181,14 +181,6 @@
 				OBJ_33 /* LICENCE */,
 			);
 			sourceTree = "<group>";
-		};
-		OBJ_7 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_8 /* SwiftyShoppy */,
-			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_8 /* SwiftyShoppy */ = {
 			isa = PBXGroup;
@@ -200,8 +192,7 @@
 				OBJ_19 /* Network */,
 				OBJ_22 /* Protocols */,
 			);
-			name = SwiftyShoppy;
-			path = Sources/SwiftyShoppy;
+			path = SwiftyShoppy;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */

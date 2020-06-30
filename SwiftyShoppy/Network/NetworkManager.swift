@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-struct NetworkManager: Networkable {
+public struct NetworkManager: Networkable {
     ///
     /// Constructor
     ///
