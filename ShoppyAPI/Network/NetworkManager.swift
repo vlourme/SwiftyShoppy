@@ -22,7 +22,7 @@ struct NetworkManager: Networkable {
         
         // Instance JSONDecoder
         decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .secondsSince1970
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
     }
     
     ///

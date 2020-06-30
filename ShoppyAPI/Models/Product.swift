@@ -6,6 +6,8 @@
 //  Copyright © 2020 Victor Lourme. All rights reserved.
 //
 
+import Foundation
+
 ///
 /// Product model
 ///
@@ -45,8 +47,8 @@ struct Product: Codable {
     /// Date
     /// TODO: Parse correctly
     ///
-    var created_at: String?
-    var updated_at: String?
+    var created_at: Date?
+    var updated_at: Date?
 }
 
 ///

@@ -6,6 +6,8 @@
 //  Copyright © 2020 Victor Lourme. All rights reserved.
 //
 
+import Foundation
+
 ///
 /// Order structure
 ///
@@ -40,8 +42,8 @@ struct Order: Codable {
     ///
     /// Date
     ///
-    var paid_at: String?
-    var created_at: String?
+    var paid_at: Date?
+    var created_at: Date?
     
     ///
     /// Data delivered
