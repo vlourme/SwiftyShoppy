@@ -16,6 +16,7 @@
 		1B7AD25424AA359400C01B25 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AD25324AA359400C01B25 /* Keys.plist */; };
 		1B7AD25A24AA43D700C01B25 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AD25924AA43D700C01B25 /* LICENCE */; };
 		1B7AD25D24AB348600C01B25 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AD25C24AB348600C01B25 /* StringExtension.swift */; };
+		1B7AD26024AB3ACD00C01B25 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AD25F24AB3ACD00C01B25 /* Product.swift */; };
 		1B8F2D3324A9129900668E7A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F2D3224A9129900668E7A /* API.swift */; };
 		1B8F2D3B24A9134200668E7A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8F2D3A24A9134200668E7A /* Moya */; };
 		1B8F2D4424A916B000668E7A /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F2D4324A916B000668E7A /* Tests.swift */; };
@@ -58,6 +59,7 @@
 		1B7AD25924AA43D700C01B25 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		1B7AD25C24AB348600C01B25 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1B7AD25E24AB394B00C01B25 /* order.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
+		1B7AD25F24AB3ACD00C01B25 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1B8F2D2F24A9129900668E7A /* libSwiftyShoppy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftyShoppy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8F2D3224A9129900668E7A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1B8F2D3C24A9153C00668E7A /* orders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				1B076BD324A9F22F00C6EFBB /* Order.swift */,
 				1B508B0424A9FD46000D4A21 /* Errors.swift */,
+				1B7AD25F24AB3ACD00C01B25 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				1B076BD424A9F22F00C6EFBB /* Order.swift in Sources */,
 				1B076BC924A9EA4200C6EFBB /* Endpoints.swift in Sources */,
+				1B7AD26024AB3ACD00C01B25 /* Product.swift in Sources */,
 				1B076BCE24A9EAA600C6EFBB /* Environment.swift in Sources */,
 				1B8F2D3324A9129900668E7A /* API.swift in Sources */,
 				1B7AD25D24AB348600C01B25 /* StringExtension.swift in Sources */,

@@ -6,8 +6,6 @@
 //  Copyright © 2020 Victor Lourme. All rights reserved.
 //
 
-import Foundation
-
 ///
 /// Order structure
 ///
@@ -55,6 +53,11 @@ struct Order: Codable {
     ///
     var is_replacement: Bool?
     var replacement_id: String?
+    
+    ///
+    /// Product
+    ///
+    var product: Product?
 }
 
 ///
@@ -64,7 +67,7 @@ struct CustomField: Codable {
     var name: String
     var type: String
     var required: Bool
-    var value: String
+    var value: String?
 }
 
 ///

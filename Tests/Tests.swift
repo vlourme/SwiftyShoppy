@@ -57,6 +57,7 @@ class Tests: XCTestCase {
             debugPrint("Price: \(order?.price ?? 0)")
             debugPrint("Quantity: \(order?.quantity ?? 0)")
             debugPrint("Accounts delivered: \(order?.accounts?.count ?? 0)")
+            debugPrint("Product name: \(order?.product?.title ?? "Unknown")")
             
             // Assert
             XCTAssertNil(error)
