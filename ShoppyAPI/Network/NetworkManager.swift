@@ -19,6 +19,10 @@ struct NetworkManager: Networkable {
             NetworkLoggerPlugin(),
             AccessTokenPlugin { _ in token }
         ])
+        
+        // Instance JSONDecoder
+        decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
     }
     
     ///
@@ -29,7 +33,7 @@ struct NetworkManager: Networkable {
     ///
     /// Decoder
     ///
-    var decoder = JSONDecoder()
+    var decoder: JSONDecoder
     
     ///
     /// Get orders
@@ -42,14 +46,9 @@ struct NetworkManager: Networkable {
                 completion(nil, error)
             case .success(let value):
                 do {
-                    // Check for error
-                    if 200 ... 299 ~= value.statusCode {
-                        // Return array
-                        let orders = try self.decoder.decode([Order].self, from: value.data)
-                        completion(orders, nil)
-                    } else {
-                        completion(nil, ShoppyError(code: value.statusCode))
-                    }
+                    let response = try value.filterSuccessfulStatusCodes()
+                    let orders = try response.map([Order].self, using: self.decoder, failsOnEmptyData: false)
+                    completion(orders, nil)
                 } catch let error {
                     completion(nil, error)
                 }

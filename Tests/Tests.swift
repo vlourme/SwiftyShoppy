@@ -53,6 +53,8 @@ class Tests: XCTestCase {
         let exp = expectation(description: "Get order list")
         
         manager?.getOrders() { (result, error) in
+            debugPrint("RESULT: \(result)")
+            
             XCTAssertNil(error)
             exp.fulfill()
         }
