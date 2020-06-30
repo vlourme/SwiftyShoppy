@@ -29,6 +29,24 @@ class Tests: XCTestCase {
     }
     
     ///
+    /// Get analytics
+    ///
+    func testGetAnalytics() throws {
+        let exp = expectation(description: "Get analytics")
+        
+        manager?.getAnalytics() { analytics, error in
+            // Debug
+            debugPrint("Total orders: \(analytics?.totalOrders ?? -1)")
+            debugPrint("Total revenue: \(analytics?.totalRevenue ?? -1)")
+            
+            XCTAssertNil(error)
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
     /// Get a specific order
     ///
     func testGetOrder() throws {

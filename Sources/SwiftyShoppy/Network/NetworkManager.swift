@@ -36,6 +36,29 @@ struct NetworkManager: Networkable {
     var decoder: JSONDecoder
     
     ///
+    /// Get analytics
+    /// - returns: Analytic object or Error
+    ///
+    func getAnalytics(completion: @escaping (Analytics?, Error?) -> ()) {
+        provider.request(.getAnalytics) { response in
+            switch response {
+            case .failure(let error):
+                print("ERROR!")
+                completion(nil, error)
+            case .success(let value):
+                do {
+                    let response = try value.filterSuccessfulStatusCodes()
+                    let analytics = try response.map(Analytics.self, using: self.decoder, failsOnEmptyData: false)
+                    completion(analytics, nil)
+                } catch let error {
+                    completion(nil, error)
+                }
+            }
+            
+        }
+    }
+    
+    ///
     /// Get an specific order
     /// - returns: Order object or Error
     ///

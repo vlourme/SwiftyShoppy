@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		1B786BA424AB48050020FC50 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B786BA324AB48050020FC50 /* Moya */; };
 		1BB764C024AB5CE600C7F63A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB764BF24AB5CE600C7F63A /* Keys.swift */; };
+		1BB764C224AB67CB00C7F63A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB764C124AB67CB00C7F63A /* Analytics.swift */; };
 		OBJ_39 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* API.swift */; };
 		OBJ_40 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Endpoints.swift */; };
 		OBJ_41 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* DateFormatter.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		1BB764BF24AB5CE600C7F63A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		1BB764C124AB67CB00C7F63A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		OBJ_13 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		OBJ_14 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				OBJ_16 /* Errors.swift */,
 				OBJ_17 /* Order.swift */,
 				OBJ_18 /* Product.swift */,
+				1BB764C124AB67CB00C7F63A /* Analytics.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				OBJ_44 /* Order.swift in Sources */,
 				OBJ_45 /* Product.swift in Sources */,
 				OBJ_47 /* NetworkManager.swift in Sources */,
+				1BB764C224AB67CB00C7F63A /* Analytics.swift in Sources */,
 				OBJ_48 /* Networkable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

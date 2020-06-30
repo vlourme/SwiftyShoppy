@@ -10,6 +10,11 @@ import Foundation
 
 enum Shoppy {
     ///
+    /// Analytics
+    ///
+    case getAnalytics
+    
+    ///
     /// Orders
     ///
     case getOrder(id: String)
