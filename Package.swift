@@ -1,9 +1,12 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
     name: "SwiftyShoppy",
+    platforms: [
+        .macOS("10.12")
+    ],
     products: [
         .library(
             name: "SwiftyShoppy",
