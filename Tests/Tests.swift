@@ -47,13 +47,34 @@ class Tests: XCTestCase {
     }
     
     ///
+    /// Get a specific order
+    ///
+    func testGetOrder() throws {
+        let exp = expectation(description: "Get order ID")
+        
+        manager?.getOrder(id: keys?["order_id"] ?? "") { order, error in
+            // Debug
+            debugPrint("Price: \(order?.price ?? 0)")
+            debugPrint("Quantity: \(order?.quantity ?? 0)")
+            debugPrint("Accounts delivered: \(order?.accounts?.count ?? 0)")
+            
+            // Assert
+            XCTAssertNil(error)
+            exp.fulfill()
+        }
+        
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
     /// Get list of orders
     ///
     func testGetOrders() throws {
         let exp = expectation(description: "Get order list")
         
         manager?.getOrders() { (result, error) in
-            debugPrint("RESULT: \(result)")
+            debugPrint("Quantity of orders: \(result?.count ?? 0)")
             
             XCTAssertNil(error)
             exp.fulfill()

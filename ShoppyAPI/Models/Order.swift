@@ -15,28 +15,29 @@ struct Order: Codable {
     ///
     /// Identifiers
     ///
-    var id: String
+    var id: String?
     var pay_id: String?
-    var product_id: String
+    var product_id: String?
     var coupon_id: String?
     
     ///
     /// Order information
     ///
-    var price: Double
-    var currency: String
-    var delivered: Int
-    var confirmations: Int
-    var required_confirmations: Int
-    var custom_fields: [CustomField]
+    var price: Double?
+    var currency: String?
+    var delivered: Int?
+    var confirmations: Int?
+    var required_confirmations: Int?
+    var custom_fields: [CustomField]?
     
     ///
     /// Buyer
     ///
-    var email: String
+    var email: String?
     var crypto_address: String?
     var crypto_amount: String?
-    var quantity: Int
+    var quantity: Int?
+    var exchange: String?
     
     ///
     /// Date
@@ -48,6 +49,12 @@ struct Order: Codable {
     /// Data delivered
     ///
     var accounts: [Account]?
+    
+    ///
+    /// Replacement
+    ///
+    var is_replacement: Bool?
+    var replacement_id: String?
 }
 
 ///

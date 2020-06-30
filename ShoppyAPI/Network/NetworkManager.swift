@@ -36,7 +36,31 @@ struct NetworkManager: Networkable {
     var decoder: JSONDecoder
     
     ///
+    /// Get an specific order
+    /// - returns: Order object or Error
+    ///
+    func getOrder(id: String, completion: @escaping (Order?, Error?) -> ()) {
+        provider.request(.getOrder(id: id)) { response in
+            switch response {
+            case .failure(let error):
+                print("ERROR!")
+                completion(nil, error)
+            case .success(let value):
+                do {
+                    let response = try value.filterSuccessfulStatusCodes()
+                    let order = try response.map(Order.self, using: self.decoder, failsOnEmptyData: false)
+                    completion(order, nil)
+                } catch let error {
+                    completion(nil, error)
+                }
+            }
+            
+        }
+    }
+    
+    ///
     /// Get orders
+    /// - returns: Order array or Error
     ///
     func getOrders(completion: @escaping ([Order]?, Error?) -> ()) {
         provider.request(.showOrders) { response in

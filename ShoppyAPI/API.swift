@@ -23,6 +23,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     var path: String {
         switch self {
+        case .getOrder(let id):
+            return "/v1/orders/\(id)"
         case .showOrders:
             return "/v1/orders"
         }
@@ -30,26 +32,25 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     var method: Moya.Method {
         switch self {
-        case .showOrders:
+        case .showOrders,
+             .getOrder:
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
+        case .getOrder:
+            return "order".getDataForJSON()
         case .showOrders:
-            guard let url = Bundle.main.url(forResource: "orders", withExtension: "json"),
-                let data = try? Data(contentsOf: url) else {
-                    return Data()
-            }
-            print(data)
-            return data
+            return "orders".getDataForJSON()
         }
     }
     
     var task: Task {
         switch self {
-        case .showOrders:
+        case .showOrders,
+             .getOrder:
             return .requestPlain
         }
     }
