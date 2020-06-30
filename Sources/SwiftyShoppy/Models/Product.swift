@@ -33,7 +33,7 @@ struct Product: Codable {
     ///
     /// Stock management
     ///
-    var stock: String? // FIXME: This is sometimes a Int, sometimes a String
+    var stock: Int?
     var stock_warning: Int?
     var quantity: Quantity?
     
@@ -45,10 +45,31 @@ struct Product: Codable {
     
     ///
     /// Date
-    /// TODO: Parse correctly
     ///
     var created_at: Date?
     var updated_at: Date?
+    
+    ///
+    /// CodingKeys to escape stock error
+    ///
+    private enum CodingKeys: String, CodingKey {
+        case stock
+    }
+    
+    ///
+    /// Init
+    ///
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        // Decode type mismatch
+        do {
+            self.stock = try container.decode(Int.self, forKey: .stock)
+        } catch DecodingError.typeMismatch {
+            self.stock = Int(try container.decode(String.self, forKey: .stock))
+        }
+        
+    }
 }
 
 ///
