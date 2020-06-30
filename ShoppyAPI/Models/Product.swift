@@ -33,7 +33,7 @@ struct Product: Codable {
     ///
     /// Stock management
     ///
-    var stock: Int?
+    var stock: String?
     var stock_warning: Int?
     var quantity: Quantity?
     
