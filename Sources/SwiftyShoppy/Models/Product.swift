@@ -33,7 +33,7 @@ struct Product: Codable {
     ///
     /// Stock management
     ///
-    var stock: String?
+    var stock: String? // FIXME: This is sometimes a Int, sometimes a String
     var stock_warning: Int?
     var quantity: Quantity?
     

@@ -16,34 +16,16 @@ enum TestError: Error {
 
 class Tests: XCTestCase {
     ///
-    /// Environment
-    ///
-    var keys: [String: String]?
-    
-    ///
     /// NetworkManager
     ///
-    var manager: NetworkManager? = nil
+    var manager: NetworkManager?
     
     ///
     /// Setup NetworkManager
     ///
     override func setUpWithError() throws {
-        // Load file
-        guard let url = Bundle(for: Tests.self).url(forResource: "Keys", withExtension: "plist") else {
-            throw TestError.PlistNotFound
-        }
-        
-        // Load keys
-        guard let fileContent = NSDictionary(contentsOf: url) as? [String: String] else {
-            throw TestError.FileError
-        }
-        
-        // Save keys
-        keys = fileContent
-        
         // Instance NetworkManager
-        manager = NetworkManager(token: keys?["token"] ?? "")
+        manager = NetworkManager(token: keys["token"] ?? "")
     }
     
     ///
@@ -52,7 +34,7 @@ class Tests: XCTestCase {
     func testGetOrder() throws {
         let exp = expectation(description: "Get order ID")
         
-        manager?.getOrder(id: keys?["order_id"] ?? "") { order, error in
+        manager?.getOrder(id: keys["order_id"] ?? "") { order, error in
             // Debug
             debugPrint("Price: \(order?.price ?? 0)")
             debugPrint("Quantity: \(order?.quantity ?? 0)")

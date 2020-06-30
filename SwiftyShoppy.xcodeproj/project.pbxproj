@@ -6,207 +6,227 @@
 	objectVersion = 52;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"SwiftyShoppy::SwiftyShoppyPackageTests::ProductTarget" /* SwiftyShoppyPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_57 /* Build configuration list for PBXAggregateTarget "SwiftyShoppyPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_60 /* PBXTargetDependency */,
+			);
+			name = SwiftyShoppyPackageTests;
+			productName = SwiftyShoppyPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		1B076BC924A9EA4200C6EFBB /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B076BC824A9EA4200C6EFBB /* Endpoints.swift */; };
-		1B076BCC24A9EA6100C6EFBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B076BCB24A9EA6100C6EFBB /* NetworkManager.swift */; };
-		1B076BCE24A9EAA600C6EFBB /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B076BCD24A9EAA600C6EFBB /* Environment.swift */; };
-		1B076BD124A9F1D400C6EFBB /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B076BD024A9F1D300C6EFBB /* Networkable.swift */; };
-		1B076BD424A9F22F00C6EFBB /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B076BD324A9F22F00C6EFBB /* Order.swift */; };
-		1B508B0524A9FD46000D4A21 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B508B0424A9FD46000D4A21 /* Errors.swift */; };
-		1B7AD25424AA359400C01B25 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AD25324AA359400C01B25 /* Keys.plist */; };
-		1B7AD25A24AA43D700C01B25 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 1B7AD25924AA43D700C01B25 /* LICENCE */; };
-		1B7AD25D24AB348600C01B25 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AD25C24AB348600C01B25 /* StringExtension.swift */; };
-		1B7AD26024AB3ACD00C01B25 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AD25F24AB3ACD00C01B25 /* Product.swift */; };
-		1B7AD26324AB3FE900C01B25 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7AD26224AB3FE900C01B25 /* DateFormatter.swift */; };
-		1B8F2D3324A9129900668E7A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F2D3224A9129900668E7A /* API.swift */; };
-		1B8F2D3B24A9134200668E7A /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8F2D3A24A9134200668E7A /* Moya */; };
-		1B8F2D4424A916B000668E7A /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F2D4324A916B000668E7A /* Tests.swift */; };
-		1B8F2D4624A916B000668E7A /* libSwiftyShoppy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8F2D2F24A9129900668E7A /* libSwiftyShoppy.a */; };
+		1B786BA424AB48050020FC50 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B786BA324AB48050020FC50 /* Moya */; };
+		1BB764C024AB5CE600C7F63A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB764BF24AB5CE600C7F63A /* Keys.swift */; };
+		OBJ_39 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* API.swift */; };
+		OBJ_40 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Endpoints.swift */; };
+		OBJ_41 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* DateFormatter.swift */; };
+		OBJ_42 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* StringExtension.swift */; };
+		OBJ_43 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Errors.swift */; };
+		OBJ_44 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Order.swift */; };
+		OBJ_45 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Product.swift */; };
+		OBJ_46 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Environment.swift */; };
+		OBJ_47 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* NetworkManager.swift */; };
+		OBJ_48 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Networkable.swift */; };
+		OBJ_55 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_66 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Tests.swift */; };
+		OBJ_68 /* SwiftyShoppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftyShoppy::SwiftyShoppy::Product" /* SwiftyShoppy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1B8F2D4724A916B000668E7A /* PBXContainerItemProxy */ = {
+		1B786BA024AB47550020FC50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1B8F2D2724A9129900668E7A /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B8F2D2E24A9129900668E7A;
-			remoteInfo = ShoppyAPI;
+			remoteGlobalIDString = "SwiftyShoppy::SwiftyShoppy";
+			remoteInfo = SwiftyShoppy;
+		};
+		1B786BA124AB47570020FC50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftyShoppy::SwiftyShoppyTests";
+			remoteInfo = SwiftyShoppyTests;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1B8F2D2D24A9129900668E7A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		1B076BC824A9EA4200C6EFBB /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		1B076BCB24A9EA6100C6EFBB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		1B076BCD24A9EAA600C6EFBB /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		1B076BD024A9F1D300C6EFBB /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
-		1B076BD324A9F22F00C6EFBB /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		1B508B0424A9FD46000D4A21 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		1B7AD25324AA359400C01B25 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		1B7AD25524AA41AA00C01B25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1B7AD25724AA420C00C01B25 /* SwiftyShoppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwiftyShoppy.png; path = ../../../../Desktop/SwiftyShoppy.png; sourceTree = "<group>"; };
-		1B7AD25824AA420C00C01B25 /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Board.png; path = ../../../../Desktop/Board.png; sourceTree = "<group>"; };
-		1B7AD25924AA43D700C01B25 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
-		1B7AD25C24AB348600C01B25 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		1B7AD25E24AB394B00C01B25 /* order.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
-		1B7AD25F24AB3ACD00C01B25 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		1B7AD26224AB3FE900C01B25 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		1B8F2D2F24A9129900668E7A /* libSwiftyShoppy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftyShoppy.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B8F2D3224A9129900668E7A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		1B8F2D3C24A9153C00668E7A /* orders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
-		1B8F2D4124A916AF00668E7A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B8F2D4324A916B000668E7A /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		1B8F2D4524A916B000668E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB764BF24AB5CE600C7F63A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		OBJ_11 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		OBJ_13 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		OBJ_14 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		OBJ_18 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		OBJ_21 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_27 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		OBJ_31 /* Media */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Media; sourceTree = SOURCE_ROOT; };
+		OBJ_32 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_33 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		"SwiftyShoppy::SwiftyShoppy::Product" /* SwiftyShoppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyShoppy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftyShoppy::SwiftyShoppyTests::Product" /* SwiftyShoppyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SwiftyShoppyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B8F2D2C24A9129900668E7A /* Frameworks */ = {
+		OBJ_49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				1B8F2D3B24A9134200668E7A /* Moya in Frameworks */,
+				1B786BA424AB48050020FC50 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B8F2D3E24A916AF00668E7A /* Frameworks */ = {
+		OBJ_67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				1B8F2D4624A916B000668E7A /* libSwiftyShoppy.a in Frameworks */,
+				OBJ_68 /* SwiftyShoppy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B076BC724A9EA3700C6EFBB /* Endpoints */ = {
+		OBJ_10 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				1B076BC824A9EA4200C6EFBB /* Endpoints.swift */,
+				OBJ_11 /* Endpoints.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		1B076BCA24A9EA5400C6EFBB /* Network */ = {
+		OBJ_12 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1B076BCB24A9EA6100C6EFBB /* NetworkManager.swift */,
-				1B076BCD24A9EAA600C6EFBB /* Environment.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		1B076BCF24A9EBF400C6EFBB /* Samples */ = {
-			isa = PBXGroup;
-			children = (
-				1B8F2D3C24A9153C00668E7A /* orders.json */,
-				1B7AD25E24AB394B00C01B25 /* order.json */,
-			);
-			path = Samples;
-			sourceTree = "<group>";
-		};
-		1B076BD224A9F22500C6EFBB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1B076BD324A9F22F00C6EFBB /* Order.swift */,
-				1B508B0424A9FD46000D4A21 /* Errors.swift */,
-				1B7AD25F24AB3ACD00C01B25 /* Product.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		1B508B0624A9FD98000D4A21 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				1B076BD024A9F1D300C6EFBB /* Networkable.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		1B7AD25624AA41DA00C01B25 /* Media */ = {
-			isa = PBXGroup;
-			children = (
-				1B7AD25824AA420C00C01B25 /* Board.png */,
-				1B7AD25724AA420C00C01B25 /* SwiftyShoppy.png */,
-			);
-			path = Media;
-			sourceTree = "<group>";
-		};
-		1B7AD25B24AB346200C01B25 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				1B7AD25C24AB348600C01B25 /* StringExtension.swift */,
-				1B7AD26224AB3FE900C01B25 /* DateFormatter.swift */,
+				OBJ_13 /* DateFormatter.swift */,
+				OBJ_14 /* StringExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1B8F2D2624A9129900668E7A = {
+		OBJ_15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1B7AD25924AA43D700C01B25 /* LICENCE */,
-				1B7AD25624AA41DA00C01B25 /* Media */,
-				1B7AD25524AA41AA00C01B25 /* README.md */,
-				1B8F2D3124A9129900668E7A /* ShoppyAPI */,
-				1B8F2D4224A916B000668E7A /* Tests */,
-				1B8F2D3024A9129900668E7A /* Products */,
+				OBJ_16 /* Errors.swift */,
+				OBJ_17 /* Order.swift */,
+				OBJ_18 /* Product.swift */,
 			);
+			path = Models;
 			sourceTree = "<group>";
 		};
-		1B8F2D3024A9129900668E7A /* Products */ = {
+		OBJ_19 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1B8F2D2F24A9129900668E7A /* libSwiftyShoppy.a */,
-				1B8F2D4124A916AF00668E7A /* Tests.xctest */,
+				OBJ_20 /* Environment.swift */,
+				OBJ_21 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		OBJ_22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* Networkable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		OBJ_24 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* SwiftyShoppyTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_25 /* SwiftyShoppyTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* Info.plist */,
+				OBJ_27 /* Tests.swift */,
+				1BB764BF24AB5CE600C7F63A /* Keys.swift */,
+			);
+			name = SwiftyShoppyTests;
+			path = Tests/SwiftyShoppyTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"SwiftyShoppy::SwiftyShoppy::Product" /* SwiftyShoppy.framework */,
+				"SwiftyShoppy::SwiftyShoppyTests::Product" /* SwiftyShoppyTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1B8F2D3124A9129900668E7A /* ShoppyAPI */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				1B7AD25B24AB346200C01B25 /* Helpers */,
-				1B508B0624A9FD98000D4A21 /* Protocols */,
-				1B076BD224A9F22500C6EFBB /* Models */,
-				1B076BCF24A9EBF400C6EFBB /* Samples */,
-				1B076BCA24A9EA5400C6EFBB /* Network */,
-				1B076BC724A9EA3700C6EFBB /* Endpoints */,
-				1B8F2D3224A9129900668E7A /* API.swift */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_24 /* Tests */,
+				OBJ_28 /* Products */,
+				OBJ_31 /* Media */,
+				OBJ_32 /* README.md */,
+				OBJ_33 /* LICENCE */,
 			);
-			path = ShoppyAPI;
 			sourceTree = "<group>";
 		};
-		1B8F2D4224A916B000668E7A /* Tests */ = {
+		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1B8F2D4324A916B000668E7A /* Tests.swift */,
-				1B7AD25324AA359400C01B25 /* Keys.plist */,
-				1B8F2D4524A916B000668E7A /* Info.plist */,
+				OBJ_8 /* SwiftyShoppy */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* SwiftyShoppy */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* API.swift */,
+				OBJ_10 /* Endpoints */,
+				OBJ_12 /* Helpers */,
+				OBJ_15 /* Models */,
+				OBJ_19 /* Network */,
+				OBJ_22 /* Protocols */,
+			);
+			name = SwiftyShoppy;
+			path = Sources/SwiftyShoppy;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B8F2D2E24A9129900668E7A /* SwiftyShoppy */ = {
+		"SwiftyShoppy::SwiftPMPackageDescription" /* SwiftyShoppyPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B8F2D3624A9129900668E7A /* Build configuration list for PBXNativeTarget "SwiftyShoppy" */;
+			buildConfigurationList = OBJ_51 /* Build configuration list for PBXNativeTarget "SwiftyShoppyPackageDescription" */;
 			buildPhases = (
-				1B8F2D2B24A9129900668E7A /* Sources */,
-				1B8F2D2C24A9129900668E7A /* Frameworks */,
-				1B8F2D2D24A9129900668E7A /* CopyFiles */,
+				OBJ_54 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyShoppyPackageDescription;
+			productName = SwiftyShoppyPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftyShoppy::SwiftyShoppy" /* SwiftyShoppy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_35 /* Build configuration list for PBXNativeTarget "SwiftyShoppy" */;
+			buildPhases = (
+				OBJ_38 /* Sources */,
+				OBJ_49 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,321 +234,366 @@
 			);
 			name = SwiftyShoppy;
 			packageProductDependencies = (
-				1B8F2D3A24A9134200668E7A /* Moya */,
+				1B786BA324AB48050020FC50 /* Moya */,
 			);
-			productName = ShoppyAPI;
-			productReference = 1B8F2D2F24A9129900668E7A /* libSwiftyShoppy.a */;
-			productType = "com.apple.product-type.library.static";
+			productName = SwiftyShoppy;
+			productReference = "SwiftyShoppy::SwiftyShoppy::Product" /* SwiftyShoppy.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		1B8F2D4024A916AF00668E7A /* Tests */ = {
+		"SwiftyShoppy::SwiftyShoppyTests" /* SwiftyShoppyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B8F2D4924A916B000668E7A /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = OBJ_62 /* Build configuration list for PBXNativeTarget "SwiftyShoppyTests" */;
 			buildPhases = (
-				1B8F2D3D24A916AF00668E7A /* Sources */,
-				1B8F2D3E24A916AF00668E7A /* Frameworks */,
-				1B8F2D3F24A916AF00668E7A /* Resources */,
+				OBJ_65 /* Sources */,
+				OBJ_67 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1B8F2D4824A916B000668E7A /* PBXTargetDependency */,
+				OBJ_69 /* PBXTargetDependency */,
 			);
-			name = Tests;
-			productName = Tests;
-			productReference = 1B8F2D4124A916AF00668E7A /* Tests.xctest */;
+			name = SwiftyShoppyTests;
+			productName = SwiftyShoppyTests;
+			productReference = "SwiftyShoppy::SwiftyShoppyTests::Product" /* SwiftyShoppyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1B8F2D2724A9129900668E7A /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = "Victor Lourme";
-				TargetAttributes = {
-					1B8F2D2E24A9129900668E7A = {
-						CreatedOnToolsVersion = 11.5;
-					};
-					1B8F2D4024A916AF00668E7A = {
-						CreatedOnToolsVersion = 11.5;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 1B8F2D2A24A9129900668E7A /* Build configuration list for PBXProject "SwiftyShoppy" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SwiftyShoppy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 1B8F2D2624A9129900668E7A;
+			mainGroup = OBJ_5;
 			packageReferences = (
-				1B8F2D3924A9134200668E7A /* XCRemoteSwiftPackageReference "Moya" */,
+				1B786BA224AB48050020FC50 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
-			productRefGroup = 1B8F2D3024A9129900668E7A /* Products */;
+			productRefGroup = OBJ_28 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B8F2D2E24A9129900668E7A /* SwiftyShoppy */,
-				1B8F2D4024A916AF00668E7A /* Tests */,
+				"SwiftyShoppy::SwiftyShoppy" /* SwiftyShoppy */,
+				"SwiftyShoppy::SwiftPMPackageDescription" /* SwiftyShoppyPackageDescription */,
+				"SwiftyShoppy::SwiftyShoppyPackageTests::ProductTarget" /* SwiftyShoppyPackageTests */,
+				"SwiftyShoppy::SwiftyShoppyTests" /* SwiftyShoppyTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		1B8F2D3F24A916AF00668E7A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B7AD25A24AA43D700C01B25 /* LICENCE in Resources */,
-				1B7AD25424AA359400C01B25 /* Keys.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		1B8F2D2B24A9129900668E7A /* Sources */ = {
+		OBJ_38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				1B076BD424A9F22F00C6EFBB /* Order.swift in Sources */,
-				1B076BC924A9EA4200C6EFBB /* Endpoints.swift in Sources */,
-				1B7AD26024AB3ACD00C01B25 /* Product.swift in Sources */,
-				1B076BCE24A9EAA600C6EFBB /* Environment.swift in Sources */,
-				1B7AD26324AB3FE900C01B25 /* DateFormatter.swift in Sources */,
-				1B8F2D3324A9129900668E7A /* API.swift in Sources */,
-				1B7AD25D24AB348600C01B25 /* StringExtension.swift in Sources */,
-				1B076BD124A9F1D400C6EFBB /* Networkable.swift in Sources */,
-				1B076BCC24A9EA6100C6EFBB /* NetworkManager.swift in Sources */,
-				1B508B0524A9FD46000D4A21 /* Errors.swift in Sources */,
+				OBJ_39 /* API.swift in Sources */,
+				OBJ_40 /* Endpoints.swift in Sources */,
+				OBJ_41 /* DateFormatter.swift in Sources */,
+				OBJ_42 /* StringExtension.swift in Sources */,
+				OBJ_43 /* Errors.swift in Sources */,
+				OBJ_44 /* Order.swift in Sources */,
+				OBJ_45 /* Product.swift in Sources */,
+				OBJ_46 /* Environment.swift in Sources */,
+				OBJ_47 /* NetworkManager.swift in Sources */,
+				OBJ_48 /* Networkable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B8F2D3D24A916AF00668E7A /* Sources */ = {
+		OBJ_54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				1B8F2D4424A916B000668E7A /* Tests.swift in Sources */,
+				OBJ_55 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_66 /* Tests.swift in Sources */,
+				1BB764C024AB5CE600C7F63A /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1B8F2D4824A916B000668E7A /* PBXTargetDependency */ = {
+		OBJ_60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1B8F2D2E24A9129900668E7A /* SwiftyShoppy */;
-			targetProxy = 1B8F2D4724A916B000668E7A /* PBXContainerItemProxy */;
+			target = "SwiftyShoppy::SwiftyShoppyTests" /* SwiftyShoppyTests */;
+			targetProxy = 1B786BA124AB47570020FC50 /* PBXContainerItemProxy */;
+		};
+		OBJ_69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftyShoppy::SwiftyShoppy" /* SwiftyShoppy */;
+			targetProxy = 1B786BA024AB47550020FC50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1B8F2D3424A9129900668E7A /* Debug */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		1B8F2D3524A9129900668E7A /* Release */ = {
+		OBJ_36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEVELOPMENT_TEAM = 834DH5487Q;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftyShoppy.xcodeproj/SwiftyShoppy_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftyShoppy;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = SwiftyShoppy;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		OBJ_37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEVELOPMENT_TEAM = 834DH5487Q;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftyShoppy.xcodeproj/SwiftyShoppy_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftyShoppy;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = SwiftyShoppy;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		1B8F2D3724A9129900668E7A /* Debug */ = {
+		OBJ_52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 834DH5487Q;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				LD = /usr/bin/true;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1B8F2D3824A9129900668E7A /* Release */ = {
+		OBJ_53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 834DH5487Q;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				LD = /usr/bin/true;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		1B8F2D4A24A916B000668E7A /* Debug */ = {
+		OBJ_58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 834DH5487Q;
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vlourme.Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1B8F2D4B24A916B000668E7A /* Release */ = {
+		OBJ_59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+			};
+			name = Release;
+		};
+		OBJ_63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 834DH5487Q;
-				INFOPLIST_FILE = Tests/Info.plist;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftyShoppy.xcodeproj/SwiftyShoppyTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@loader_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vlourme.Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = SwiftyShoppyTests;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		OBJ_64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 834DH5487Q;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftyShoppy.xcodeproj/SwiftyShoppyTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = SwiftyShoppyTests;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B8F2D2A24A9129900668E7A /* Build configuration list for PBXProject "SwiftyShoppy" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "SwiftyShoppy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B8F2D3424A9129900668E7A /* Debug */,
-				1B8F2D3524A9129900668E7A /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B8F2D3624A9129900668E7A /* Build configuration list for PBXNativeTarget "SwiftyShoppy" */ = {
+		OBJ_35 /* Build configuration list for PBXNativeTarget "SwiftyShoppy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B8F2D3724A9129900668E7A /* Debug */,
-				1B8F2D3824A9129900668E7A /* Release */,
+				OBJ_36 /* Debug */,
+				OBJ_37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B8F2D4924A916B000668E7A /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		OBJ_51 /* Build configuration list for PBXNativeTarget "SwiftyShoppyPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B8F2D4A24A916B000668E7A /* Debug */,
-				1B8F2D4B24A916B000668E7A /* Release */,
+				OBJ_52 /* Debug */,
+				OBJ_53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_57 /* Build configuration list for PBXAggregateTarget "SwiftyShoppyPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_58 /* Debug */,
+				OBJ_59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_62 /* Build configuration list for PBXNativeTarget "SwiftyShoppyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_63 /* Debug */,
+				OBJ_64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -536,7 +601,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1B8F2D3924A9134200668E7A /* XCRemoteSwiftPackageReference "Moya" */ = {
+		1B786BA224AB48050020FC50 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -547,12 +612,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1B8F2D3A24A9134200668E7A /* Moya */ = {
+		1B786BA324AB48050020FC50 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B8F2D3924A9134200668E7A /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 1B786BA224AB48050020FC50 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 1B8F2D2724A9129900668E7A /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

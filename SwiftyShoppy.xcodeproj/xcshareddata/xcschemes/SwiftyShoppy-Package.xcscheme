@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1150"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B8F2D2E24A9129900668E7A"
-               BuildableName = "libSwiftyShoppy.a"
+               BlueprintIdentifier = "SwiftyShoppy::SwiftyShoppy"
+               BuildableName = "SwiftyShoppy.framework"
                BlueprintName = "SwiftyShoppy"
                ReferencedContainer = "container:SwiftyShoppy.xcodeproj">
             </BuildableReference>
@@ -27,21 +27,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "token"
-            value = ""
-            isEnabled = "NO">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B8F2D4024A916AF00668E7A"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BlueprintIdentifier = "SwiftyShoppy::SwiftyShoppyTests"
+               BuildableName = "SwiftyShoppyTests.xctest"
+               BlueprintName = "SwiftyShoppyTests"
                ReferencedContainer = "container:SwiftyShoppy.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -64,15 +57,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B8F2D2E24A9129900668E7A"
-            BuildableName = "libSwiftyShoppy.a"
-            BlueprintName = "SwiftyShoppy"
-            ReferencedContainer = "container:SwiftyShoppy.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
