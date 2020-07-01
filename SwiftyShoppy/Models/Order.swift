@@ -38,6 +38,7 @@ public struct Order: Codable {
     public var crypto_amount: String?
     public var quantity: Int?
     public var exchange: String?
+    public var gateway: String?
     
     ///
     /// Date
