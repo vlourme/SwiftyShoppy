@@ -15,66 +15,66 @@ public struct Order: Codable {
     ///
     /// Identifiers
     ///
-    var id: String?
-    var pay_id: String?
-    var product_id: String?
-    var coupon_id: String?
+    public var id: String?
+    public var pay_id: String?
+    public var product_id: String?
+    public var coupon_id: String?
     
     ///
     /// Order information
     ///
-    var price: Double?
-    var currency: String?
-    var delivered: Int?
-    var confirmations: Int?
-    var required_confirmations: Int?
-    var custom_fields: [CustomField]?
+    public var price: Double?
+    public var currency: String?
+    public var delivered: Int?
+    public var confirmations: Int?
+    public var required_confirmations: Int?
+    public var custom_fields: [CustomField]?
     
     ///
     /// Buyer
     ///
-    var email: String?
-    var crypto_address: String?
-    var crypto_amount: String?
-    var quantity: Int?
-    var exchange: String?
+    public var email: String?
+    public var crypto_address: String?
+    public var crypto_amount: String?
+    public var quantity: Int?
+    public var exchange: String?
     
     ///
     /// Date
     ///
-    var paid_at: Date?
-    var created_at: Date?
+    public var paid_at: Date?
+    public var created_at: Date?
     
     ///
     /// Data delivered
     ///
-    var accounts: [Account]?
+    public var accounts: [Account]?
     
     ///
     /// Replacement
     ///
-    var is_replacement: Bool?
-    var replacement_id: String?
+    public var is_replacement: Bool?
+    public var replacement_id: String?
     
     ///
     /// Product
     ///
-    var product: Product?
+    public var product: Product?
 }
 
 ///
 /// Custom Field
 ///
-struct CustomField: Codable {
-    var name: String
-    var type: String
-    var required: Bool
-    var value: String?
+public struct CustomField: Codable {
+    public var name: String
+    public var type: String
+    public var required: Bool
+    public var value: String?
 }
 
 ///
 /// Account
 ///
-struct Account: Codable {
-    var account: String
+public struct Account: Codable {
+    public var account: String
 }

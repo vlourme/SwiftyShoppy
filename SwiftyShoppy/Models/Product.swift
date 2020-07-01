@@ -15,39 +15,39 @@ public struct Product: Codable {
     ///
     /// Identifiers
     ///
-    var id: String?
-    var attachment_id: String?
+    public var id: String?
+    public var attachment_id: String?
     
     ///
     /// Information
     ///
-    var title: String?
-    var description: String?
-    var image: Image?
-    var unlisted: Bool?
-    var type: String?
-    var price: Double?
-    var currency: String?
-    var email: Email?
+    public var title: String?
+    public var description: String?
+    public var image: Image?
+    public var unlisted: Bool?
+    public var type: String?
+    public var price: Double?
+    public var currency: String?
+    public var email: Email?
     
     ///
     /// Stock management
     ///
-    var stock: Int?
-    var stock_warning: Int?
-    var quantity: Quantity?
+    public var stock: Int?
+    public var stock_warning: Int?
+    public var quantity: Quantity?
     
     ///
     /// Payment
     ///
-    var confirmations: Int?
-    var gateways: [String]?
+    public var confirmations: Int?
+    public var gateways: [String]?
     
     ///
     /// Date
     ///
-    var created_at: Date?
-    var updated_at: Date?
+    public var created_at: Date?
+    public var updated_at: Date?
     
     ///
     /// CodingKeys to escape stock error
@@ -75,23 +75,23 @@ public struct Product: Codable {
 ///
 /// Image model
 ///
-struct Image: Codable {
-    var url: String?
-    var path: String?
+public struct Image: Codable {
+    public var url: String?
+    public var path: String?
 }
 
 ///
 /// Email model
 ///
-struct Email: Codable {
-    var enabled: Bool?
-    var value: String?
+public struct Email: Codable {
+    public var enabled: Bool?
+    public var value: String?
 }
 
 ///
 /// Quantity model
 ///
-struct Quantity: Codable {
-    var min: Int?
-    var max: Int?
+public struct Quantity: Codable {
+    public var min: Int?
+    public var max: Int?
 }

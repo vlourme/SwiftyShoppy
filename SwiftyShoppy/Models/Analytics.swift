@@ -9,28 +9,28 @@ public struct Analytics: Codable {
     ///
     /// Identifiers
     ///
-    var status: Bool?
-    var cached_at: String?
+    public var status: Bool?
+    public var cached_at: String?
     
     ///
     /// Incomes
     ///
-    var income: [String: Int]?
+    public var income: [String: Int]?
     
     ///
     /// Summary
     ///
-    var totalRevenue: Int?
-    var totalOrders: Int?
-    var todaysRevenue: Int?
+    public var totalRevenue: Int?
+    public var totalOrders: Int?
+    public var todaysRevenue: Int?
     
     ///
     /// Gateway
     ///
-    var gateways: [String: Int]?
+    public var gateways: [String: Int]?
     
     ///
     /// Conversion
     ///
-    var conversion: Int?
+    public var conversion: Int?
 }
