@@ -59,6 +59,7 @@ class Tests: XCTestCase {
             debugPrint("Accounts delivered: \(order?.accounts?.count ?? 0)")
             debugPrint("Product name: \(order?.product?.title ?? "Unknown")")
             debugPrint("Date: \(String(describing: order?.paid_at))")
+            debugPrint("Agent: \(String(describing: order?.agent))")
             
             // Assert
             XCTAssertNil(error)

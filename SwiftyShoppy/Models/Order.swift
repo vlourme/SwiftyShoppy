@@ -66,6 +66,16 @@ public struct Order: Codable {
     /// Product
     ///
     public var product: Product?
+    
+    ///
+    /// Agent
+    ///
+    public var agent: Agent?
+    
+    ///
+    ///
+    /// Hash
+    public var hash: String?
 }
 
 ///
