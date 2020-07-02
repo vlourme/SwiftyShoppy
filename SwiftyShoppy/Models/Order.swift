@@ -13,6 +13,11 @@ import Foundation
 ///
 public struct Order: Codable {
     ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    ///
     /// Identifiers
     ///
     public var id: String?

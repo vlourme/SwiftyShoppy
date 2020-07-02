@@ -7,6 +7,11 @@
 
 public struct Analytics: Codable {
     ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    ///
     /// Identifiers
     ///
     public var status: Bool?

@@ -13,6 +13,11 @@ import Foundation
 ///
 public struct Product: Codable {
     ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    ///
     /// Identifiers
     ///
     public var id: String?
