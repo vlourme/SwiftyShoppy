@@ -107,6 +107,11 @@ public struct Product: Codable {
 /// Image model
 ///
 public struct Image: Codable {
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
     public var url: String?
     public var path: String?
 }
@@ -115,6 +120,11 @@ public struct Image: Codable {
 /// Email model
 ///
 public struct Email: Codable {
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
     public var enabled: Bool?
     public var value: String?
 }
@@ -123,6 +133,11 @@ public struct Email: Codable {
 /// Quantity model
 ///
 public struct Quantity: Codable {
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
     public var min: Int?
     public var max: Int?
 }

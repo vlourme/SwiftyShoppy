@@ -72,9 +72,14 @@ public struct Order: Codable {
 /// Custom Field
 ///
 public struct CustomField: Codable {
-    public var name: String
-    public var type: String
-    public var required: Bool
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    public var name: String?
+    public var type: String?
+    public var required: Bool?
     public var value: String?
 }
 
@@ -82,5 +87,10 @@ public struct CustomField: Codable {
 /// Account
 ///
 public struct Account: Codable {
-    public var account: String
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    public var account: String?
 }
