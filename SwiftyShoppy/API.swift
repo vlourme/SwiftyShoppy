@@ -53,13 +53,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     }
     
     var task: Task {
-        switch self {
-        case .showOrders,
-             .getOrder,
-             .getAnalytics:
             return .requestPlain
         }
-    }
     
     var headers: [String : String]? {
         return [
