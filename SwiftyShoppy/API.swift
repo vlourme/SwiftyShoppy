@@ -42,15 +42,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     }
     
     var sampleData: Data {
-        switch self {
-        case .getOrder:
-            return "order".getDataForJSON()
-        case .showOrders:
-            return "orders".getDataForJSON()
-        case .getAnalytics:
-            return "analytics".getDataForJSON()
+        return Data()
         }
-    }
     
     var task: Task {
             return .requestPlain
