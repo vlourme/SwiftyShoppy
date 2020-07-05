@@ -13,22 +13,22 @@ public class NetworkManager {
     ///
     /// Provider
     ///
-    static var provider: MoyaProvider<Shoppy> = .init()
+    public static var provider: MoyaProvider<Shoppy> = .init()
     
     ///
     /// Decoder
     ///
-    static var decoder: JSONDecoder = JSONDecoder()
+    public static var decoder: JSONDecoder = JSONDecoder()
     
     ///
     /// Request target
     ///
-    static var target: Shoppy = .getAnalytics
+    public static var target: Shoppy = .getAnalytics
     
     ///
     /// Prepare request
     ///
-    static func prepare(token: String) -> NetworkManager.Type {
+    public static func prepare(token: String) -> NetworkManager.Type {
         // Generate provider with token
         provider = MoyaProvider<Shoppy>(plugins: [
             NetworkLoggerPlugin(),
@@ -45,7 +45,7 @@ public class NetworkManager {
     ///
     /// Set target
     ///
-    static func target(_ target: Shoppy) -> NetworkManager.Type {
+    public static func target(_ target: Shoppy) -> NetworkManager.Type {
         // Set target
         self.target = target
         
@@ -57,7 +57,7 @@ public class NetworkManager {
     /// Get response as array of object
     /// - returns: Array of object [T]
     ///
-    static func asArray<T: Decodable>(_ type: T.Type,
+    public static func asArray<T: Decodable>(_ type: T.Type,
                                       success successCallback: @escaping ([T]) -> Void,
                                       error errorCallback: @escaping (Error) -> Void) {
         // Make request
@@ -87,7 +87,7 @@ public class NetworkManager {
     /// Get response as single object
     /// - returns: Single object [T]
     ///
-    static func asObject<T: Decodable>(_ type: T.Type,
+    public static func asObject<T: Decodable>(_ type: T.Type,
                                 success successCallback: @escaping (T) -> Void,
                                 error errorCallback: @escaping (Error) -> Void) {
         // Make request

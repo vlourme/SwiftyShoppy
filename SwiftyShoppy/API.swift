@@ -13,15 +13,15 @@ import Foundation
 /// Shoppy Structure
 ///
 extension Shoppy : TargetType, AccessTokenAuthorizable {
-    var baseURL: URL {
+    public var baseURL: URL {
         return URL(string: "https://shoppy.gg/api")!
     }
     
-    var authorizationType: AuthorizationType? {
+    public var authorizationType: AuthorizationType? {
         return .custom("")
     }
     
-    var path: String {
+    public var path: String {
         switch self {
         case .getSettings:
             return "/v1/settings"
@@ -47,7 +47,7 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         }
     }
     
-    var method: Moya.Method {
+    public var method: Moya.Method {
         switch self {
         case .getOrders,
              .getOrder,
@@ -67,11 +67,11 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         }
     }
     
-    var sampleData: Data {
+    public var sampleData: Data {
         return Data()
     }
     
-    var task: Task {
+    public var task: Task {
         switch self {
         case let .createProduct(product),
              let .updateProduct(product):
@@ -85,7 +85,7 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         }
     }
     
-    var headers: [String : String]? {
+    public var headers: [String : String]? {
         return [
             "User-Agent": "SwiftyShoppy/1.0"
         ]

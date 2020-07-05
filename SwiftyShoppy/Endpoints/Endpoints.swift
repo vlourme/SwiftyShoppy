@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Shoppy {
+public enum Shoppy {
     ///
     /// Settings
     ///
