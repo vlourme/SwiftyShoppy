@@ -17,18 +17,18 @@ class Tests: XCTestCase {
         let exp = expectation(description: "Get analytics")
         
         NetworkManager
-        .prepare(token: keys["token"] ?? "no token")
-        .target(.getAnalytics)
-        .asObject(Analytics.self,
-                 success: { analytics in
-                    debugPrint("Total orders: \(analytics.totalOrders ?? -1)")
-                    
-                    XCTAssert(true)
-                    exp.fulfill()
-        }, error: { error in
-            XCTAssert(false)
-            exp.fulfill()
-        })
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getAnalytics)
+            .asObject(Analytics.self,
+                      success: { analytics in
+                        debugPrint("Total orders: \(analytics.totalOrders ?? -1)")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
         
         wait(for: [exp], timeout: 10)
     }
@@ -43,7 +43,7 @@ class Tests: XCTestCase {
             .prepare(token: keys["token"] ?? "no token")
             .target(.getSettings)
             .asObject(Settings.self,
-                     success: { settings in
+                      success: { settings in
                         debugPrint("User email: \(settings.user?.email ?? "-1")")
                         debugPrint("User avatar: \(settings.settings?.userAvatarURL ?? "-1")")
                         
@@ -139,7 +139,7 @@ class Tests: XCTestCase {
             .prepare(token: keys["token"] ?? "no token")
             .target(.getProduct(id: keys["product_id"] ?? "no product"))
             .asObject(Product.self,
-                     success: { product in
+                      success: { product in
                         debugPrint("Product name: \(product.title ?? "-1")")
                         debugPrint(product)
                         
@@ -157,7 +157,7 @@ class Tests: XCTestCase {
     /// Create a product
     ///
     func testCreateProduct() throws {
-        let exp = expectation(description: "Get a product")
+        let exp = expectation(description: "Create a product")
         
         // Create product
         var product = Product()
@@ -174,10 +174,33 @@ class Tests: XCTestCase {
             .prepare(token: keys["token"] ?? "no token")
             .target(.createProduct(product))
             .asObject(UpdatedProduct.self,
-                     success: { update in
+                      success: { update in
                         print("Status: \(update.message ?? "-1")")
                         print("Product ID: \(update.resource?.id ?? "-1")")
-                        print(update.resource)
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
+    /// Delete a product
+    ///
+    func testDeleteProduct() throws {
+        let exp = expectation(description: "Delete a product")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.deleteProduct(id: "ProductID"))
+            .asObject(UpdatedProduct.self,
+                      success: { update in
+                        debugPrint("Message: \(update.message ?? "-1")")
+                        debugPrint("Product deleted: \(update.resource?.title ?? "-1")")
                         
                         XCTAssert(true)
                         exp.fulfill()
