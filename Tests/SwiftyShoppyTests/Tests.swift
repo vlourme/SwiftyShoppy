@@ -65,7 +65,7 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.getOrder(id: keys["order_id"] ?? "no order id"))
+            .target(.getOrder(keys["order_id"] ?? "no order id"))
             .asObject(Order.self,
                       success: { order in
                         debugPrint("Order email: \(order.email ?? "-1")")
@@ -137,7 +137,7 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.getProduct(id: keys["product_id"] ?? "no product"))
+            .target(.getProduct(keys["product_id"] ?? "no product"))
             .asObject(Product.self,
                       success: { product in
                         debugPrint("Product name: \(product.title ?? "-1")")
@@ -197,7 +197,7 @@ class Tests: XCTestCase {
         // Get product
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.getProduct(id: "Product title"))
+            .target(.getProduct("Product title"))
             .asObject(Product.self,
                       success: { product in
                         // Edit product
@@ -237,7 +237,7 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.deleteProduct(id: "ProductID"))
+            .target(.deleteProduct("ProductID"))
             .asObject(UpdatedProduct.self,
                       success: { update in
                         debugPrint("Message: \(update.message ?? "-1")")
@@ -261,7 +261,7 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.deleteProductImage(id: "To2qHRv"))
+            .target(.deleteProductImage("To2qHRv"))
             .asObject(UpdatedProduct.self,
                       success: { update in
                         debugPrint("Message: \(update.message ?? "-1")")
