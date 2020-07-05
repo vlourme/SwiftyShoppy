@@ -16,7 +16,6 @@ public struct NetworkManager {
     public init(token: String) {
         // Generate provider with token
         provider = MoyaProvider<Shoppy>(plugins: [
-            NetworkLoggerPlugin(),
             AccessTokenPlugin { _ in token }
         ])
         
