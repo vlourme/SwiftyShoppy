@@ -35,6 +35,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/products"
         case .getProduct(let id):
             return "/v1/products/\(id)"
+        case .createProduct:
+            return "/v1/products"
         }
     }
     
@@ -47,6 +49,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
              .getProducts,
              .getProduct:
             return .get
+        case .createProduct:
+            return .put
         }
     }
     
@@ -55,7 +59,12 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case let .createProduct(product):
+            return .requestJSONEncodable(product)
+        default:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {

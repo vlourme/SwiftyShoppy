@@ -18,6 +18,12 @@ public struct Product: Codable {
     public init() {}
     
     ///
+    /// Model
+    /// Note: this key is ignored in GET methods
+    ///
+    public var model: String? = "Product"
+    
+    ///
     /// Identifiers
     ///
     public var id: String?
@@ -29,24 +35,24 @@ public struct Product: Codable {
     public var title: String?
     public var description: String?
     public var image: Image?
-    public var unlisted: Bool?
-    public var type: String?
+    public var unlisted: Bool? = false
+    public var type: DeliveryType?
     public var price: Double?
-    public var currency: String?
-    public var email: Email?
+    public var currency: String? = "EUR"
+    public var email: Email? = Email()
     
     ///
     /// Stock management
     ///
     public var stock: Int?
-    public var stock_warning: Int?
-    public var quantity: Quantity?
+    public var stock_warning: Int? = 0
+    public var quantity: Quantity? = Quantity()
     
     ///
     /// Payment
     ///
     public var confirmations: Int?
-    public var gateways: [String]?
+    public var gateways: [Gateways]?
     
     ///
     /// Date
@@ -86,18 +92,18 @@ public struct Product: Codable {
             self.description = try container.decode(String?.self, forKey: .description)
             self.image = try container.decode(Image?.self, forKey: .image)
             self.unlisted = try container.decode(Bool?.self, forKey: .unlisted)
-            self.type = try container.decode(String?.self, forKey: .type)
+            self.type = try container.decode(DeliveryType?.self, forKey: .type)
             self.price = try container.decode(Double?.self, forKey: .price)
             self.currency = try container.decode(String?.self, forKey: .currency)
             self.email = try container.decode(Email?.self, forKey: .email)
             self.stock_warning = try container.decode(Int?.self, forKey: .stock_warning)
             self.quantity = try container.decode(Quantity?.self, forKey: .quantity)
             self.confirmations = try container.decode(Int?.self, forKey: .confirmations)
-            self.gateways = try container.decode([String]?.self, forKey: .gateways)
+            self.gateways = try container.decode([Gateways]?.self, forKey: .gateways)
             self.created_at = try container.decode(Date?.self, forKey: .created_at)
             self.updated_at = try container.decode(Date?.self, forKey: .updated_at)
-        } catch let error {
-            print(error)
+        } catch {
+            // Ignore
         }
         
     }
@@ -125,7 +131,7 @@ public struct Email: Codable {
     ///
     public init() {}
     
-    public var enabled: Bool?
+    public var enabled: Bool? = false
     public var value: String?
 }
 
@@ -138,6 +144,28 @@ public struct Quantity: Codable {
     ///
     public init() {}
     
-    public var min: Int?
-    public var max: Int?
+    public var min: Int? = 1
+    public var max: Int? = 10000
+}
+
+///
+/// Updated product
+/// Note: Use this struct to parse created and updated products
+///
+public struct UpdatedProduct: Codable {
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    ///
+    /// Status
+    ///
+    public var status: Bool?
+    public var message: String?
+    
+    ///
+    /// Content
+    ///
+    public var resource: Product?
 }

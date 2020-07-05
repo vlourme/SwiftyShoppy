@@ -141,6 +141,43 @@ class Tests: XCTestCase {
             .asObject(Product.self,
                      success: { product in
                         debugPrint("Product name: \(product.title ?? "-1")")
+                        debugPrint(product)
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
+    /// Create a product
+    ///
+    func testCreateProduct() throws {
+        let exp = expectation(description: "Get a product")
+        
+        // Create product
+        var product = Product()
+        product.title = "Testing product"
+        product.price = 15.51
+        product.unlisted = true
+        product.gateways = [
+            .bitcoin,
+            .ethereum
+        ]
+        product.type = .service
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.createProduct(product))
+            .asObject(UpdatedProduct.self,
+                     success: { update in
+                        print("Status: \(update.message ?? "-1")")
+                        print("Product ID: \(update.resource?.id ?? "-1")")
+                        print(update.resource)
                         
                         XCTAssert(true)
                         exp.fulfill()

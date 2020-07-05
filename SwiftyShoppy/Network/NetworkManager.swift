@@ -31,6 +31,7 @@ public class NetworkManager {
     static func prepare(token: String) -> NetworkManager.Type {
         // Generate provider with token
         provider = MoyaProvider<Shoppy>(plugins: [
+            NetworkLoggerPlugin(),
             AccessTokenPlugin { _ in token }
         ])
         

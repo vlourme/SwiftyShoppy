@@ -30,4 +30,5 @@ enum Shoppy {
     ///
     case getProducts
     case getProduct(id: String)
+    case createProduct(_ product: Product)
 }
