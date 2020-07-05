@@ -19,7 +19,6 @@ extension NetworkManager {
         provider.request(.getOrder(id: id)) { response in
             switch response {
             case .failure(let error):
-                print("ERROR!")
                 completion(nil, error)
             case .success(let value):
                 do {
@@ -29,8 +28,7 @@ extension NetworkManager {
                 } catch let error {
                     completion(nil, error)
                 }
-            }
-            
+            }  
         }
     }
     
@@ -42,7 +40,6 @@ extension NetworkManager {
         provider.request(.showOrders) { response in
             switch response {
             case .failure(let error):
-                print("ERROR!")
                 completion(nil, error)
             case .success(let value):
                 do {
@@ -53,7 +50,6 @@ extension NetworkManager {
                     completion(nil, error)
                 }
             }
-            
         }
     }
 }

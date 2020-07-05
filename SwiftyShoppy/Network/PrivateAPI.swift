@@ -19,7 +19,6 @@ extension NetworkManager {
         provider.request(.getAnalytics) { response in
             switch response {
             case .failure(let error):
-                print("ERROR!")
                 completion(nil, error)
             case .success(let value):
                 do {
