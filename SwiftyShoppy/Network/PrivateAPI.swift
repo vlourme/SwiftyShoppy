@@ -30,7 +30,27 @@ extension NetworkManager {
                     completion(nil, error)
                 }
             }
-            
+        }
+    }
+    
+    ///
+    /// Get settings
+    /// - returns: Settings object or Error
+    ///
+    public func getSettings(completion: @escaping (Settings?, Error?) -> ()) {
+        provider.request(.getSettings) { response in
+            switch response {
+            case .failure(let error):
+                completion(nil, error)
+            case .success(let value):
+                do {
+                    let response = try value.filterSuccessfulStatusCodes()
+                    let orders = try response.map(Settings.self, using: self.decoder, failsOnEmptyData: false)
+                    completion(orders, nil)
+                } catch let error {
+                    completion(nil, error)
+                }
+            }
         }
     }
 }

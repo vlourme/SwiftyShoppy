@@ -10,6 +10,11 @@ import Foundation
 
 enum Shoppy {
     ///
+    /// Settings
+    ///
+    case getSettings
+    
+    ///
     /// Analytics
     ///
     case getAnalytics
@@ -19,4 +24,9 @@ enum Shoppy {
     ///
     case getOrder(id: String)
     case showOrders
+    
+    ///
+    /// Products
+    ///
+    case getProducts
 }

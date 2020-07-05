@@ -47,6 +47,25 @@ class Tests: XCTestCase {
     }
     
     ///
+    /// Get settings
+    ///
+    func testGetSettings() throws {
+        let exp = expectation(description: "Get settings")
+        
+        manager?.getSettings() { settings, error in
+            // Debug
+            debugPrint("Username: \(settings?.user?.username ?? "Unknown")")
+            debugPrint("Email: \(settings?.user?.email ?? "Unknown")")
+            debugPrint("Bitcoin: \(settings?.settings?.bitcoinAddress ?? "Unknown")")
+            
+            XCTAssertNil(error)
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
     /// Get a specific order
     ///
     func testGetOrder() throws {

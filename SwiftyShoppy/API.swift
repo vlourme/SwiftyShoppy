@@ -23,6 +23,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     var path: String {
         switch self {
+        case .getSettings:
+            return "/v1/settings"
         case .getAnalytics:
             return "/v1/analytics"
         case .getOrder(let id):
@@ -36,7 +38,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         switch self {
         case .showOrders,
              .getOrder,
-             .getAnalytics:
+             .getAnalytics,
+             .getSettings:
             return .get
         }
     }
