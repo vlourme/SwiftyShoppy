@@ -104,4 +104,20 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Get list of products
+    ///
+    func testGetProducts() throws {
+        let exp = expectation(description: "Get product list")
+        
+        manager?.getProducts() { (result, error) in
+            debugPrint("Quantity of products: \(result?.count ?? 0)")
+            
+            XCTAssertNil(error)
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 10)
+    }
 }

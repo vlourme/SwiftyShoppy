@@ -31,6 +31,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/orders/\(id)"
         case .showOrders:
             return "/v1/orders"
+        case .getProducts:
+            return "/v1/products"
         }
     }
     
@@ -39,18 +41,19 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         case .showOrders,
              .getOrder,
              .getAnalytics,
-             .getSettings:
+             .getSettings,
+             .getProducts:
             return .get
         }
     }
     
     var sampleData: Data {
         return Data()
-        }
+    }
     
     var task: Task {
-            return .requestPlain
-        }
+        return .requestPlain
+    }
     
     var headers: [String : String]? {
         return [
