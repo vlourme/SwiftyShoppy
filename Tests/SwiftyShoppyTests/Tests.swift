@@ -9,39 +9,26 @@
 import XCTest
 @testable import SwiftyShoppy
 
-enum TestError: Error {
-    case PlistNotFound
-    case FileError
-}
-
 class Tests: XCTestCase {
-    ///
-    /// NetworkManager
-    ///
-    var manager: NetworkManager?
-    
-    ///
-    /// Setup NetworkManager
-    ///
-    override func setUpWithError() throws {
-        // Instance NetworkManager
-        manager = NetworkManager(token: keys["token"] ?? "")
-    }
-    
     ///
     /// Get analytics
     ///
     func testGetAnalytics() throws {
         let exp = expectation(description: "Get analytics")
         
-        manager?.getAnalytics() { analytics, error in
-            // Debug
-            debugPrint("Total orders: \(analytics?.totalOrders ?? -1)")
-            debugPrint("Total revenue: \(analytics?.totalRevenue ?? -1)")
-            
-            XCTAssertNil(error)
+        NetworkManager
+        .prepare(token: keys["token"] ?? "no token")
+        .target(.getAnalytics)
+        .asObject(Analytics.self,
+                 success: { analytics in
+                    debugPrint("Total orders: \(analytics.totalOrders ?? -1)")
+                    
+                    XCTAssert(true)
+                    exp.fulfill()
+        }, error: { error in
+            XCTAssert(false)
             exp.fulfill()
-        }
+        })
         
         wait(for: [exp], timeout: 10)
     }
@@ -52,15 +39,20 @@ class Tests: XCTestCase {
     func testGetSettings() throws {
         let exp = expectation(description: "Get settings")
         
-        manager?.getSettings() { settings, error in
-            // Debug
-            debugPrint("Username: \(settings?.user?.username ?? "Unknown")")
-            debugPrint("Email: \(settings?.user?.email ?? "Unknown")")
-            debugPrint("Bitcoin: \(settings?.settings?.bitcoinAddress ?? "Unknown")")
-            
-            XCTAssertNil(error)
-            exp.fulfill()
-        }
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getSettings)
+            .asObject(Settings.self,
+                     success: { settings in
+                        debugPrint("User email: \(settings.user?.email ?? "-1")")
+                        debugPrint("User avatar: \(settings.settings?.userAvatarURL ?? "-1")")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
         
         wait(for: [exp], timeout: 10)
     }
@@ -71,19 +63,21 @@ class Tests: XCTestCase {
     func testGetOrder() throws {
         let exp = expectation(description: "Get order ID")
         
-        manager?.getOrder(id: keys["order_id"] ?? "") { order, error in
-            // Debug
-            debugPrint("Price: \(order?.price ?? 0)")
-            debugPrint("Quantity: \(order?.quantity ?? 0)")
-            debugPrint("Accounts delivered: \(order?.accounts?.count ?? 0)")
-            debugPrint("Product name: \(order?.product?.title ?? "Unknown")")
-            debugPrint("Date: \(String(describing: order?.paid_at))")
-            debugPrint("Agent: \(String(describing: order?.agent))")
-            
-            // Assert
-            XCTAssertNil(error)
-            exp.fulfill()
-        }
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getOrder(id: keys["order_id"] ?? "no order id"))
+            .asObject(Order.self,
+                      success: { order in
+                        debugPrint("Order email: \(order.email ?? "-1")")
+                        debugPrint("Order price: \(order.price ?? -1)")
+                        debugPrint("Order quantity: \(order.quantity ?? -1)")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
         
         
         wait(for: [exp], timeout: 10)
@@ -95,12 +89,19 @@ class Tests: XCTestCase {
     func testGetOrders() throws {
         let exp = expectation(description: "Get order list")
         
-        manager?.getOrders() { (result, error) in
-            debugPrint("Quantity of orders: \(result?.count ?? 0)")
-            
-            XCTAssertNil(error)
-            exp.fulfill()
-        }
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.showOrders)
+            .asArray(Order.self,
+                     success: { orders in
+                        debugPrint("Orders count: \(orders.count)")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
         
         wait(for: [exp], timeout: 10)
     }
@@ -111,12 +112,19 @@ class Tests: XCTestCase {
     func testGetProducts() throws {
         let exp = expectation(description: "Get product list")
         
-        manager?.getProducts() { (result, error) in
-            debugPrint("Quantity of products: \(result?.count ?? 0)")
-            
-            XCTAssertNil(error)
-            exp.fulfill()
-        }
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getProducts)
+            .asArray(Product.self,
+                     success: { products in
+                        debugPrint("Products count: \(products.count)")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
         
         wait(for: [exp], timeout: 10)
     }
