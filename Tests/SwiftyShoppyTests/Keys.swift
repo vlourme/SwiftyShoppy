@@ -8,9 +8,10 @@
 ///
 /// Environment
 /// - Put your keys here for testing.
-/// - This variable is never pushed on GitHub
+/// - These variable are never pushed on GitHub
 ///
 var keys = [
     "token": "",
-    "order_id": ""
+    "order_id": "",
+    "product_id": ""
 ]

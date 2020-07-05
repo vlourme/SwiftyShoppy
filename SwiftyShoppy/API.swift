@@ -27,12 +27,14 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/settings"
         case .getAnalytics:
             return "/v1/analytics"
-        case .getOrder(let id):
-            return "/v1/orders/\(id)"
         case .getOrders:
             return "/v1/orders"
+        case .getOrder(let id):
+            return "/v1/orders/\(id)"
         case .getProducts:
             return "/v1/products"
+        case .getProduct(let id):
+            return "/v1/products/\(id)"
         }
     }
     
@@ -42,7 +44,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
              .getOrder,
              .getAnalytics,
              .getSettings,
-             .getProducts:
+             .getProducts,
+             .getProduct:
             return .get
         }
     }

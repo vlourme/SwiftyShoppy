@@ -128,4 +128,27 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Get a product
+    ///
+    func testGetProduct() throws {
+        let exp = expectation(description: "Get a product")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getProduct(id: keys["product_id"] ?? "no product"))
+            .asObject(Product.self,
+                     success: { product in
+                        debugPrint("Product name: \(product.title ?? "-1")")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }
