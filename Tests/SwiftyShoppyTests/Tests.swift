@@ -254,6 +254,30 @@ class Tests: XCTestCase {
     }
     
     ///
+    /// Upload a product image
+    ///
+    func testUploadProductImage() throws {
+        let exp = expectation(description: "Delete product image")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.uploadProductImage("Product ID", image: Data(base64Encoded: "") ?? Data()))
+            .asObject(UpdatedProduct.self,
+                      success: { update in
+                        debugPrint("Message: \(update.message ?? "-1")")
+                        debugPrint("Image URL: \(update.resource?.image?.url ?? "-1")")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
     /// Delete product image
     ///
     func testDeleteProductImage() throws {

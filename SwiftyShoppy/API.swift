@@ -40,6 +40,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/products"
         case let .updateProduct(product):
             return "/v1/products/\(product.id ?? "-1")"
+        case let .uploadProductImage(id, _):
+            return "/v1/products/\(id)/image"
         case let .deleteProductImage(id):
             return "/v1/products/\(id)/deleteImage"
         }
@@ -57,7 +59,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         case .createProduct:
             return .put
         case .updateProduct,
-             .deleteProductImage:
+             .deleteProductImage,
+             .uploadProductImage:
             return .post
         case .deleteProduct:
             return .delete
@@ -73,6 +76,10 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         case let .createProduct(product),
              let .updateProduct(product):
             return .requestJSONEncodable(product)
+        case let .uploadProductImage(_, image):
+            return .uploadMultipart([
+                MultipartFormData(provider: .data(image), name: "file", fileName: "image.png", mimeType: "image/png")
+            ])
         default:
             return .requestPlain
         }
