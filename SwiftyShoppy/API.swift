@@ -29,19 +29,18 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/analytics"
         case .getOrders:
             return "/v1/orders"
-        case .getOrder(let id):
+        case let .getOrder(id):
             return "/v1/orders/\(id)"
         case .getProducts:
             return "/v1/products"
-        case .getProduct(let id):
+        case let .getProduct(id),
+             let .deleteProduct(id):
             return "/v1/products/\(id)"
         case .createProduct:
             return "/v1/products"
-        case .updateProduct(let product):
+        case let .updateProduct(product):
             return "/v1/products/\(product.id ?? "-1")"
-        case .deleteProduct(let id):
-            return "/v1/products/\(id)"
-        case .deleteProductImage(let id):
+        case let .deleteProductImage(id):
             return "/v1/products/\(id)/deleteImage"
         }
     }
