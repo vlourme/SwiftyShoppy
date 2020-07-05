@@ -189,6 +189,47 @@ class Tests: XCTestCase {
     }
     
     ///
+    /// Update a product
+    ///
+    func testUpdateProduct() throws {
+        let exp = expectation(description: "Update a product")
+        
+        // Get product
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getProduct(id: "Product title"))
+            .asObject(Product.self,
+                      success: { product in
+                        // Edit product
+                        var prod = product
+                        prod.title = "New title!"
+                        
+                        // Update product
+                        NetworkManager
+                            .prepare(token: keys["token"] ?? "no token")
+                            .target(.updateProduct(prod))
+                            .asObject(UpdatedProduct.self,
+                                      success: { update in
+                                        // Update product
+                                        print("Status: \(update.message ?? "-1")")
+                                        print("Product ID: \(update.resource?.id ?? "-1")")
+                                        print("Product title: \(update.resource?.title ?? "-1")")
+                                        
+                                        XCTAssert(true)
+                                        exp.fulfill()
+                            }, error: { error in
+                                XCTAssert(false)
+                                exp.fulfill()
+                            })
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
     /// Delete a product
     ///
     func testDeleteProduct() throws {
