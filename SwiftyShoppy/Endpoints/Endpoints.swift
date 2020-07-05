@@ -23,7 +23,7 @@ enum Shoppy {
     /// Orders
     ///
     case getOrder(id: String)
-    case showOrders
+    case getOrders
     
     ///
     /// Products

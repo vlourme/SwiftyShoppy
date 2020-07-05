@@ -29,7 +29,7 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/analytics"
         case .getOrder(let id):
             return "/v1/orders/\(id)"
-        case .showOrders:
+        case .getOrders:
             return "/v1/orders"
         case .getProducts:
             return "/v1/products"
@@ -38,7 +38,7 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     var method: Moya.Method {
         switch self {
-        case .showOrders,
+        case .getOrders,
              .getOrder,
              .getAnalytics,
              .getSettings,

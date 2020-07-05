@@ -91,7 +91,7 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.showOrders)
+            .target(.getOrders)
             .asArray(Order.self,
                      success: { orders in
                         debugPrint("Orders count: \(orders.count)")
