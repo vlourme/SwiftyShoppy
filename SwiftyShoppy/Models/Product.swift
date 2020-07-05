@@ -40,6 +40,7 @@ public struct Product: Codable {
     public var price: Double?
     public var currency: String? = "EUR"
     public var email: Email? = Email()
+    public var webhook_urls: [String]?
     
     ///
     /// Stock management
