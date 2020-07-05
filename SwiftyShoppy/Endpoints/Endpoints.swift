@@ -33,4 +33,5 @@ enum Shoppy {
     case createProduct(_ product: Product)
     case updateProduct(_ product: Product)
     case deleteProduct(id: String)
+    case deleteProductImage(id: String)
 }

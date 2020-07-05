@@ -41,6 +41,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/products/\(product.id ?? "-1")"
         case .deleteProduct(let id):
             return "/v1/products/\(id)"
+        case .deleteProductImage(let id):
+            return "/v1/products/\(id)/deleteImage"
         }
     }
     
@@ -55,7 +57,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return .get
         case .createProduct:
             return .put
-        case .updateProduct:
+        case .updateProduct,
+             .deleteProductImage:
             return .post
         case .deleteProduct:
             return .delete

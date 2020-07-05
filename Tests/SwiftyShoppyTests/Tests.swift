@@ -252,4 +252,28 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Delete product image
+    ///
+    func testDeleteProductImage() throws {
+        let exp = expectation(description: "Delete product image")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.deleteProductImage(id: "To2qHRv"))
+            .asObject(UpdatedProduct.self,
+                      success: { update in
+                        debugPrint("Message: \(update.message ?? "-1")")
+                        // No resource is returned on deleteProductImage endpoint
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }
