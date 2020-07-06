@@ -141,7 +141,7 @@ class Tests: XCTestCase {
             .asObject(Product.self,
                       success: { product in
                         debugPrint("Product name: \(product.title ?? "-1")")
-                        debugPrint(product)
+                        debugPrint("Product stock: \(product.stock?.get() ?? -1)")
                         
                         XCTAssert(true)
                         exp.fulfill()
