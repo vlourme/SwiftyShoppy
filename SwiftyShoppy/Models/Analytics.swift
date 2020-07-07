@@ -20,14 +20,14 @@ public struct Analytics: Codable {
     ///
     /// Incomes
     ///
-    public var income: [String: Int]?
+    public var income: [String: Double]?
     
     ///
     /// Summary
     ///
-    public var totalRevenue: Int?
+    public var totalRevenue: Double?
     public var totalOrders: Int?
-    public var todaysRevenue: Int?
+    public var todaysRevenue: Double?
     
     ///
     /// Gateway
