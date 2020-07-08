@@ -22,13 +22,13 @@ public enum Shoppy {
     ///
     /// Orders
     ///
-    case getOrders
+    case getOrders(_ page: Int = 1)
     case getOrder(_ id: String)
     
     ///
     /// Products
     ///
-    case getProducts
+    case getProducts(_ page: Int = 1)
     case getProduct(_ id: String)
     case createProduct(_ product: Product)
     case updateProduct(_ product: Product)

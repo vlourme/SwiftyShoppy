@@ -91,10 +91,11 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.getOrders)
+            .target(.getOrders(2))
             .asArray(Order.self,
                      success: { orders in
                         debugPrint("Orders count: \(orders.count)")
+                        debugPrint(orders)
                         
                         XCTAssert(true)
                         exp.fulfill()
@@ -114,7 +115,7 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.getProducts)
+            .target(.getProducts(1))
             .asArray(Product.self,
                      success: { products in
                         debugPrint("Products count: \(products.count)")

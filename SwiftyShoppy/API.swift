@@ -73,13 +73,21 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     public var task: Task {
         switch self {
+        case let .getOrders(page),
+             let .getProducts(page):
+            return .requestParameters(parameters: [
+                "page": page
+            ], encoding: URLEncoding.queryString)
+            
         case let .createProduct(product),
              let .updateProduct(product):
             return .requestJSONEncodable(product)
+            
         case let .uploadProductImage(_, image):
             return .uploadMultipart([
                 MultipartFormData(provider: .data(image), name: "file", fileName: "image.png", mimeType: "image/png")
             ])
+            
         default:
             return .requestPlain
         }
