@@ -5,8 +5,8 @@
 # SwiftyShoppy
 ![GitHub](https://img.shields.io/github/license/vlourme/SwiftyShoppy)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/vlourme/SwiftyShoppy?color=ff1a55&label=version)
-> SwiftyShoppy is an API wrapper for shoppy.gg selling service.
-> This API is built on top of Moya and aims to reproduce as soon as possible the full API proposed on [shoppy.dev](shoppy.dev) and also some private API routes such as analytics and profile settings.
+> SwiftyShoppy is an API wrapper written in Swift for Shoppy.gg online commerce website.
+> The API is user-friendly, fast and need less than 10 lines to write to start using it!
 
 ## Installation
 SwiftyShoppy can be installed via Swift Package Manager.
@@ -18,7 +18,7 @@ SwiftyShoppy can be installed via Swift Package Manager.
 
 ### Install for a package
 1. Add this line to your `Package.swift`, in the dependencies array: `
-.package(url: "https://github.com/vlourme/SwiftyShoppy.git", .upToNextMajor(from: "1.0.14"))
+.package(url: "https://github.com/vlourme/SwiftyShoppy.git", .upToNextMajor(from: "1.1.0"))
 `
 
 ## Getting started
@@ -68,6 +68,7 @@ NetworkManager
 ```
 
 ### More ressources
+- Check out the wiki for more complex situations: [Wiki](https://github.com/vlourme/SwiftyShoppy/wiki)
 - A list of endpoints is available here: [Endpoints.swift](https://github.com/vlourme/SwiftyShoppy/blob/master/SwiftyShoppy/Endpoints/Endpoints.swift)
 - More examples are available in unit test: [Tests.swift](https://github.com/vlourme/SwiftyShoppy/blob/master/Tests/SwiftyShoppyTests/Tests.swift)
 
