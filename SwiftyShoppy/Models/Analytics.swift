@@ -26,16 +26,16 @@ public struct Analytics: Codable {
     /// Summary
     ///
     public var totalRevenue: Double?
-    public var totalOrders: Int?
+    public var totalOrders: Double?
     public var todaysRevenue: Double?
     
     ///
     /// Gateway
     ///
-    public var gateways: [String: Int]?
+    public var gateways: [String: Double]?
     
     ///
     /// Conversion
     ///
-    public var conversion: Int?
+    public var conversion: Double?
 }
