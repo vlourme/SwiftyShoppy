@@ -48,6 +48,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/products/\(id)/deleteImage"
         case .getQueries:
             return "/v1/queries"
+        case let .getQuery(id):
+            return "/v1/queries/\(id)"
         }
     }
     

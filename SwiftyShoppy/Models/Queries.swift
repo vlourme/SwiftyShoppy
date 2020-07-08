@@ -55,6 +55,11 @@ public struct Query: Codable {
     /// Replies
     ///
     public var replies: [QueryReply]?
+    
+    ///
+    /// Sender agent
+    ///
+    public var agent: Agent?
 }
 
 ///

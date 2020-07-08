@@ -77,4 +77,9 @@ public enum Shoppy {
     /// Get list of queries by page
     ///
     case getQueries(_ page: Int = 1)
+    
+    ///
+    /// Get a specific query by its ID
+    ///
+    case getQuery(_ id: String)
 }

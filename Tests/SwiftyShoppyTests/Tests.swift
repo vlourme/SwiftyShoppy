@@ -351,4 +351,28 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Get a specific query
+    ///
+    func testGetQuery() throws {
+        let exp = expectation(description: "Get a queries")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getQuery("V0y61Db"))
+            .asObject(Query.self,
+                      success: { query in
+                        debugPrint(query)
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                print(error)
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }
