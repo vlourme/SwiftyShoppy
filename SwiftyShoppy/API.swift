@@ -50,12 +50,15 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/queries"
         case let .getQuery(id):
             return "/v1/queries/\(id)"
+        case let .replyToQuery(id, _):
+            return "/v1/query/\(id)/reply"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .createProduct:
+        case .createProduct,
+             .replyToQuery:
             return .put
             
         case .updateProduct,
@@ -93,6 +96,11 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         case let .createProduct(product),
              let .updateProduct(product):
             return .requestJSONEncodable(product)
+            
+        case let .replyToQuery(_, message):
+            return .requestParameters(parameters: [
+                "message": message
+            ], encoding: JSONEncoding.default)
             
         case let .uploadProductImage(_, image):
             return .uploadMultipart([

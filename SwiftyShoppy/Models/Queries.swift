@@ -113,6 +113,31 @@ public struct QueryReply: Codable {
 }
 
 ///
+/// Updated query (use for .replyToQuery)
+///
+public struct UpdatedQuery<Element: Codable>: Codable {
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    ///
+    /// Status
+    ///
+    public var status: Bool?
+    
+    ///
+    /// Message
+    ///
+    public var message: String?
+    
+    ///
+    /// Ressource
+    ///
+    public var resource: Element?
+}
+
+///
 /// Query status
 ///
 public enum QueryStatus: Int {

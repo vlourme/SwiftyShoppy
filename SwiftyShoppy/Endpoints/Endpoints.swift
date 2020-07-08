@@ -82,4 +82,9 @@ public enum Shoppy {
     /// Get a specific query by its ID
     ///
     case getQuery(_ id: String)
+    
+    ///
+    /// Reply to a query by its ID
+    ///
+    case replyToQuery(_ id: String, message: String)
 }

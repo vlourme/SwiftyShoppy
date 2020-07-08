@@ -375,4 +375,29 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Reply to a query
+    ///
+    func testReplyToQuery() throws {
+        let exp = expectation(description: "Reply to a queries")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.replyToQuery("posn7ez", message: "Hello from the test units!"))
+            .asObject(UpdatedQuery<Query>.self,
+                      success: { update in
+                        debugPrint("Message: \(update.message ?? "")")
+                        debugPrint("Query author: \(update.resource?.email ?? "")")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                print(error)
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }
