@@ -53,23 +53,19 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     public var method: Moya.Method {
         switch self {
-        case .getOrders,
-             .getOrder,
-             .getAnalytics,
-             .getMetrics,
-             .getSettings,
-             .getProducts,
-             .getProduct,
-             .getQueries:
-            return .get
         case .createProduct:
             return .put
+            
         case .updateProduct,
              .deleteProductImage,
              .uploadProductImage:
             return .post
+            
         case .deleteProduct:
             return .delete
+            
+        default:
+            return .get
         }
     }
     
