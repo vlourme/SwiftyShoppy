@@ -46,6 +46,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/products/\(id)/image"
         case let .deleteProductImage(id):
             return "/v1/products/\(id)/deleteImage"
+        case .getQueries:
+            return "/v1/queries"
         }
     }
     
@@ -57,7 +59,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
              .getMetrics,
              .getSettings,
              .getProducts,
-             .getProduct:
+             .getProduct,
+             .getQueries:
             return .get
         case .createProduct:
             return .put
@@ -83,7 +86,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             ], encoding: URLEncoding.queryString)
             
         case let .getOrders(page),
-             let .getProducts(page):
+             let .getProducts(page),
+             let .getQueries(page):
             return .requestParameters(parameters: [
                 "page": page
             ], encoding: URLEncoding.queryString)

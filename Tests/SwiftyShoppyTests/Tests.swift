@@ -324,4 +324,31 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Get list of queries
+    ///
+    func testGetQueries() throws {
+        let exp = expectation(description: "Get list of queries")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getQueries())
+            .asArray(Query.self,
+                      success: { query in
+                        for q in query {
+                            debugPrint("Query author: \(q.email ?? "")")
+                            debugPrint("Query first message: \(q.message ?? "")")
+                        }
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                print(error)
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }

@@ -71,4 +71,10 @@ public enum Shoppy {
     /// Remove a product image by its ID
     ///
     case deleteProductImage(_ id: String)
+    
+    
+    ///
+    /// Get list of queries by page
+    ///
+    case getQueries(_ page: Int = 1)
 }
