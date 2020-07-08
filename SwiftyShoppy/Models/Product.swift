@@ -100,25 +100,3 @@ public struct Quantity: Codable {
     public var min: Int? = 1
     public var max: Int? = 10000
 }
-
-///
-/// Updated product
-/// Note: Use this struct to parse created and updated products
-///
-public struct UpdatedProduct: Codable {
-    ///
-    /// Public Initializer
-    ///
-    public init() {}
-    
-    ///
-    /// Status
-    ///
-    public var status: Bool?
-    public var message: String?
-    
-    ///
-    /// Content
-    ///
-    public var resource: Product?
-}

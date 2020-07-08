@@ -197,7 +197,7 @@ class Tests: XCTestCase {
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
             .target(.createProduct(product))
-            .asObject(UpdatedProduct.self,
+            .asObject(ResourceUpdate<Product>.self,
                       success: { update in
                         print("Status: \(update.message ?? "-1")")
                         print("Product ID: \(update.resource?.id ?? "-1")")
@@ -232,7 +232,7 @@ class Tests: XCTestCase {
                         NetworkManager
                             .prepare(token: keys["token"] ?? "no token")
                             .target(.updateProduct(prod))
-                            .asObject(UpdatedProduct.self,
+                            .asObject(ResourceUpdate<Product>.self,
                                       success: { update in
                                         // Update product
                                         print("Status: \(update.message ?? "-1")")
@@ -262,7 +262,7 @@ class Tests: XCTestCase {
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
             .target(.deleteProduct("ProductID"))
-            .asObject(UpdatedProduct.self,
+            .asObject(ResourceUpdate<Product>.self,
                       success: { update in
                         debugPrint("Message: \(update.message ?? "-1")")
                         debugPrint("Product deleted: \(update.resource?.title ?? "-1")")
@@ -286,7 +286,7 @@ class Tests: XCTestCase {
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
             .target(.uploadProductImage("Product ID", image: Data(base64Encoded: "") ?? Data()))
-            .asObject(UpdatedProduct.self,
+            .asObject(ResourceUpdate<Product>.self,
                       success: { update in
                         debugPrint("Message: \(update.message ?? "-1")")
                         debugPrint("Image URL: \(update.resource?.image?.url ?? "-1")")
@@ -310,7 +310,7 @@ class Tests: XCTestCase {
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
             .target(.deleteProductImage("To2qHRv"))
-            .asObject(UpdatedProduct.self,
+            .asObject(ResourceUpdate<Product>.self,
                       success: { update in
                         debugPrint("Message: \(update.message ?? "-1")")
                         // No resource is returned on deleteProductImage endpoint
@@ -335,7 +335,7 @@ class Tests: XCTestCase {
             .prepare(token: keys["token"] ?? "no token")
             .target(.getQueries())
             .asArray(Query.self,
-                      success: { query in
+                     success: { query in
                         for q in query {
                             debugPrint("Query author: \(q.email ?? "")")
                             debugPrint("Query first message: \(q.message ?? "")")
@@ -360,7 +360,7 @@ class Tests: XCTestCase {
         
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.getQuery("V0y61Db"))
+            .target(.getQuery("posn7ez"))
             .asObject(Query.self,
                       success: { query in
                         debugPrint(query)
@@ -385,7 +385,7 @@ class Tests: XCTestCase {
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
             .target(.replyToQuery("posn7ez", message: "Hello from the test units!"))
-            .asObject(UpdatedQuery<Query>.self,
+            .asObject(ResourceUpdate<Query>.self,
                       success: { update in
                         debugPrint("Message: \(update.message ?? "")")
                         debugPrint("Query author: \(update.resource?.email ?? "")")
