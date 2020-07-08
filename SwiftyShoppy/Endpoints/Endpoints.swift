@@ -87,4 +87,9 @@ public enum Shoppy {
     /// Reply to a query by its ID
     ///
     case replyToQuery(_ id: String, message: String)
+    
+    ///
+    /// Update a query by doing an action (open or close)
+    ///
+    case updateQuery(_ id: String, action: QueryAction)
 }

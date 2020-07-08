@@ -400,4 +400,29 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Update a query
+    ///
+    func testUpdateQuery() throws {
+        let exp = expectation(description: "Update a queries")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.updateQuery("posn7ez", action: .Close))
+            .asObject(ResourceUpdate<QueryActionResponse>.self,
+                      success: { update in
+                        debugPrint("Message: \(update.message ?? "")")
+                        debugPrint("New status: \(update.resource?.query_status ?? -1)")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                print(error)
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }

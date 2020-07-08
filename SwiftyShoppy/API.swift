@@ -52,6 +52,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/queries/\(id)"
         case let .replyToQuery(id, _):
             return "/v1/query/\(id)/reply"
+        case let .updateQuery(id, action):
+            return "/v1/query/\(id)/\(action.rawValue)"
         }
     }
     
@@ -63,7 +65,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             
         case .updateProduct,
              .deleteProductImage,
-             .uploadProductImage:
+             .uploadProductImage,
+             .updateQuery:
             return .post
             
         case .deleteProduct:

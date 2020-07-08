@@ -113,6 +113,26 @@ public struct QueryReply: Codable {
 }
 
 ///
+/// Query response on .updateQuery (parse it using generics: ResourceUpdate<QueryActionResponse>)
+///
+public struct QueryActionResponse: Codable {
+    ///
+    /// Public Initializer
+    ///
+    public init() {}
+    
+    ///
+    /// Processing message
+    ///
+    public var message: String?
+    
+    ///
+    /// Query new status
+    ///
+    public var query_status: QueryStatus.RawValue?
+}
+
+///
 /// Query status
 ///
 public enum QueryStatus: Int {
@@ -120,4 +140,12 @@ public enum QueryStatus: Int {
     case UserReply = 1
     case Replied = 2
     case Closed = 3
+}
+
+///
+/// Query actions
+///
+public enum QueryAction: String {
+    case ReOpen = "reopen"
+    case Close = "close"
 }
