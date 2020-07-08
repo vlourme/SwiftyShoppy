@@ -18,6 +18,7 @@ public enum Shoppy {
     /// Analytics
     ///
     case getAnalytics
+    case getMetrics(_ type: MetricType, range: Int)
     
     ///
     /// Orders

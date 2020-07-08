@@ -27,6 +27,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/settings"
         case .getAnalytics:
             return "/v1/analytics"
+        case .getMetrics:
+            return "/v1/home/metrics"
         case .getOrders:
             return "/v1/orders"
         case let .getOrder(id):
@@ -52,6 +54,7 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
         case .getOrders,
              .getOrder,
              .getAnalytics,
+             .getMetrics,
              .getSettings,
              .getProducts,
              .getProduct:
@@ -73,6 +76,12 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     public var task: Task {
         switch self {
+        case let .getMetrics(type, range):
+            return .requestParameters(parameters: [
+                "card": type.rawValue,
+                "range": range,
+            ], encoding: URLEncoding.queryString)
+            
         case let .getOrders(page),
              let .getProducts(page):
             return .requestParameters(parameters: [

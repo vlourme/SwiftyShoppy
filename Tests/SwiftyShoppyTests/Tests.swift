@@ -34,6 +34,29 @@ class Tests: XCTestCase {
     }
     
     ///
+    /// Get metrics
+    ///
+    func testGetMetrics() throws {
+        let exp = expectation(description: "Get metrics")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getMetrics(.revenue, range: 1000))
+            .asObject(Metrics.self,
+                      success: { metrics in
+                        debugPrint("Total revenue: \(metrics.value?.value ?? 0)\(metrics.value?.prefix ?? "$")")
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
+    ///
     /// Get settings
     ///
     func testGetSettings() throws {
