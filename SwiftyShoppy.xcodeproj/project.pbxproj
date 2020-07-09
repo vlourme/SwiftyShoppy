@@ -31,6 +31,7 @@
 		1B94D95624B637BE00CEFFED /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94D95524B637BE00CEFFED /* Resource.swift */; };
 		1BB764C024AB5CE600C7F63A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB764BF24AB5CE600C7F63A /* Keys.swift */; };
 		1BB764C224AB67CB00C7F63A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB764C124AB67CB00C7F63A /* Analytics.swift */; };
+		1BBAC68124B758B600E05261 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAC68024B758B600E05261 /* Attachment.swift */; };
 		1BD7D4E924B09E0E00857EEC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD7D4E824B09E0E00857EEC /* Settings.swift */; };
 		OBJ_39 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* API.swift */; };
 		OBJ_40 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Endpoints.swift */; };
@@ -70,6 +71,7 @@
 		1B94D95524B637BE00CEFFED /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		1BB764BF24AB5CE600C7F63A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		1BB764C124AB67CB00C7F63A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		1BBAC68024B758B600E05261 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		1BD7D4E824B09E0E00857EEC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		OBJ_13 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				1B94D95124B622FE00CEFFED /* Metrics.swift */,
 				1B94D95324B62A3F00CEFFED /* Queries.swift */,
 				1B94D95524B637BE00CEFFED /* Resource.swift */,
+				1BBAC68024B758B600E05261 /* Attachment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				1B94D95224B622FE00CEFFED /* Metrics.swift in Sources */,
 				1B94D95424B62A3F00CEFFED /* Queries.swift in Sources */,
 				1B94D95624B637BE00CEFFED /* Resource.swift in Sources */,
+				1BBAC68124B758B600E05261 /* Attachment.swift in Sources */,
 				OBJ_39 /* API.swift in Sources */,
 				1B6199DC24ADF28D003FA43F /* Agent.swift in Sources */,
 				1BD7D4E924B09E0E00857EEC /* Settings.swift in Sources */,

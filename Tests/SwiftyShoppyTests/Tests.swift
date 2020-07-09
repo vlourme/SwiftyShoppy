@@ -425,4 +425,31 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    ///
+    /// Get attachments
+    ///
+    func testGetAttachments() throws {
+        let exp = expectation(description: "Get attachments")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getAttachments)
+            .asArray(Attachment.self,
+                      success: { attachments in
+                        for at in attachments {
+                            debugPrint("Attachment name: \(at.file_name ?? "")")
+                            debugPrint("Attachment size: \((at.file_size ?? 0) / 1000)KB")
+                        }
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                print(error)
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }

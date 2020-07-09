@@ -54,6 +54,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
             return "/v1/query/\(id)/reply"
         case let .updateQuery(id, action):
             return "/v1/query/\(id)/\(action.rawValue)"
+        case .getAttachments:
+            return "/v1/attachments"
         }
     }
     

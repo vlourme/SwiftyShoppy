@@ -92,4 +92,9 @@ public enum Shoppy {
     /// Update a query by doing an action (open or close)
     ///
     case updateQuery(_ id: String, action: QueryAction)
+    
+    ///
+    /// Get every attachments of the account
+    ///
+    case getAttachments
 }
