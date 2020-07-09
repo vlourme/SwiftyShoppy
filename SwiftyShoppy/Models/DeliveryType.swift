@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum DeliveryType: String, Codable {
+public enum DeliveryType: String, Codable, CaseIterable {
     case service = "service"
     case account = "account"
     case file = "file"

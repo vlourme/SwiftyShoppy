@@ -10,7 +10,7 @@ import Foundation
 ///
 /// Gateways
 ///
-public enum Gateways: String, Codable {
+public enum Gateways: String, Codable, CaseIterable {
     case bitcoin = "Bitcoin"
     case ethereum = "Ethereum"
     case litecoin = "Litecoin"
