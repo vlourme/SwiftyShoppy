@@ -28,12 +28,19 @@ public class NetworkManager {
     ///
     /// Prepare request
     ///
-    public static func prepare(token: String) -> NetworkManager.Type {
-        // Generate provider with token
-        provider = MoyaProvider<Shoppy>(plugins: [
-            NetworkLoggerPlugin(),
+    public static func prepare(token: String, debug: Bool = false) -> NetworkManager.Type {
+        // Prepare list of plugins
+        var plugins: [PluginType] = [
             AccessTokenPlugin { _ in token }
-        ])
+        ]
+        
+        // Set debug
+        if debug {
+            plugins.append(NetworkLoggerPlugin())
+        }
+        
+        // Generate provider with token
+        provider = MoyaProvider<Shoppy>(plugins: plugins)
         
         // Set date decoding strategy
         decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
