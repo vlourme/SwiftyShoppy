@@ -18,7 +18,7 @@ SwiftyShoppy can be installed via Swift Package Manager.
 
 ### Install for a package
 1. Add this line to your `Package.swift`, in the dependencies array: `
-.package(url: "https://github.com/vlourme/SwiftyShoppy.git", .upToNextMajor(from: "1.1.0"))
+.package(url: "https://github.com/vlourme/SwiftyShoppy.git", .upToNextMajor(from: "1.1.1"))
 `
 
 ## Getting started
