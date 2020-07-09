@@ -54,7 +54,7 @@ public struct Order: Codable {
     ///
     /// Data delivered
     ///
-    public var accounts: [Account]?
+    public var accounts: [Account?]?
     
     ///
     /// Replacement
@@ -91,16 +91,4 @@ public struct CustomField: Codable {
     public var type: String?
     public var required: Bool?
     public var value: String?
-}
-
-///
-/// Account
-///
-public struct Account: Codable {
-    ///
-    /// Public Initializer
-    ///
-    public init() {}
-    
-    public var account: String?
 }

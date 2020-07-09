@@ -32,6 +32,7 @@
 		1BB764C024AB5CE600C7F63A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB764BF24AB5CE600C7F63A /* Keys.swift */; };
 		1BB764C224AB67CB00C7F63A /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB764C124AB67CB00C7F63A /* Analytics.swift */; };
 		1BBAC68124B758B600E05261 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAC68024B758B600E05261 /* Attachment.swift */; };
+		1BBAC68324B75E3600E05261 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAC68224B75E3600E05261 /* Account.swift */; };
 		1BD7D4E924B09E0E00857EEC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD7D4E824B09E0E00857EEC /* Settings.swift */; };
 		OBJ_39 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* API.swift */; };
 		OBJ_40 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Endpoints.swift */; };
@@ -72,6 +73,7 @@
 		1BB764BF24AB5CE600C7F63A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		1BB764C124AB67CB00C7F63A /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		1BBAC68024B758B600E05261 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		1BBAC68224B75E3600E05261 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		1BD7D4E824B09E0E00857EEC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		OBJ_13 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				1B94D95324B62A3F00CEFFED /* Queries.swift */,
 				1B94D95524B637BE00CEFFED /* Resource.swift */,
 				1BBAC68024B758B600E05261 /* Attachment.swift */,
+				1BBAC68224B75E3600E05261 /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				OBJ_40 /* Endpoints.swift in Sources */,
 				1B8A2C2B24B22224003A496E /* Gateways.swift in Sources */,
 				OBJ_41 /* DateFormatter.swift in Sources */,
+				1BBAC68324B75E3600E05261 /* Account.swift in Sources */,
 				1B8A2C2D24B222CA003A496E /* DeliveryType.swift in Sources */,
 				OBJ_44 /* Order.swift in Sources */,
 				OBJ_45 /* Product.swift in Sources */,

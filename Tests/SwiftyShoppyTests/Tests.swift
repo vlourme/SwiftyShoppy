@@ -167,9 +167,14 @@ class Tests: XCTestCase {
                         debugPrint("Product name: \(product.title ?? "-1")")
                         debugPrint("Product stock: \(product.stock?.get() ?? -1)")
                         
+                        for ac in product.accounts ?? [] {
+                            debugPrint(ac?.get() ?? "")
+                        }
+                        
                         XCTAssert(true)
                         exp.fulfill()
             }, error: { error in
+                print(error)
                 XCTAssert(false)
                 exp.fulfill()
             })
@@ -221,12 +226,16 @@ class Tests: XCTestCase {
         // Get product
         NetworkManager
             .prepare(token: keys["token"] ?? "no token")
-            .target(.getProduct("Product title"))
+            .target(.getProduct("V0pSPyI"))
             .asObject(Product.self,
                       success: { product in
                         // Edit product
                         var prod = product
                         prod.title = "New title!"
+                        prod.accounts = [
+                            .account("One account"),
+                            .account("Two account!")
+                        ]
                         
                         // Update product
                         NetworkManager

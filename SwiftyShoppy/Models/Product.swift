@@ -27,7 +27,6 @@ public struct Product: Codable {
     /// Identifiers
     ///
     public var id: String?
-    public var attachment_id: String?
     
     ///
     /// Information
@@ -41,7 +40,13 @@ public struct Product: Codable {
     public var currency: String? = "EUR"
     public var email: Email? = Email()
     public var webhook_urls: [String?]?
+    
+    ///
+    /// Delivery data
+    ///
+    public var attachment_id: String?
     public var dynamic_url: String?
+    public var accounts: [Account?]?
     
     ///
     /// Stock management
