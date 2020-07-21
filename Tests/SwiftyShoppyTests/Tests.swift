@@ -462,4 +462,29 @@ class Tests: XCTestCase {
         
         wait(for: [exp], timeout: 10)
     }
+    
+    func testGetFeedbacks() throws {
+        let exp = expectation(description: "Get feedbacks")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token")
+            .target(.getFeedbacks())
+            .asArray(Feedback.self,
+                      success: { feedbacks in
+                        for fb in feedbacks {
+                            debugPrint("Feedback: \(fb.comment ?? "")")
+                            debugPrint("Seller reply: \(fb.response ?? "Not replied")")
+                            debugPrint("Stars: \(fb.stars ?? -1)")
+                        }
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                print(error)
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
 }

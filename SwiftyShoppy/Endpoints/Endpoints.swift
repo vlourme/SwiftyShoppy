@@ -97,4 +97,14 @@ public enum Shoppy {
     /// Get every attachments of the account
     ///
     case getAttachments
+    
+    ///
+    /// Get every feedbacks
+    ///
+    case getFeedbacks(_ page: Int = 1)
+    
+    ///
+    /// Get a feedback by ID
+    ///
+    case getFeedback(_ id: String)
 }

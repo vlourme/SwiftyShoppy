@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1B40548C24C76C5100026A68 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40548B24C76C5100026A68 /* Feedback.swift */; };
 		1B6199DC24ADF28D003FA43F /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6199DB24ADF28D003FA43F /* Agent.swift */; };
 		1B786BA424AB48050020FC50 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B786BA324AB48050020FC50 /* Moya */; };
 		1B8A2C2B24B22224003A496E /* Gateways.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A2C2A24B22224003A496E /* Gateways.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B40548B24C76C5100026A68 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		1B6199DB24ADF28D003FA43F /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		1B8A2C2A24B22224003A496E /* Gateways.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gateways.swift; sourceTree = "<group>"; };
 		1B8A2C2C24B222CA003A496E /* DeliveryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryType.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				1B94D95524B637BE00CEFFED /* Resource.swift */,
 				1BBAC68024B758B600E05261 /* Attachment.swift */,
 				1BBAC68224B75E3600E05261 /* Account.swift */,
+				1B40548B24C76C5100026A68 /* Feedback.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			files = (
 				1B8A2C2F24B23315003A496E /* MetadataType.swift in Sources */,
 				1B94D95224B622FE00CEFFED /* Metrics.swift in Sources */,
+				1B40548C24C76C5100026A68 /* Feedback.swift in Sources */,
 				1B94D95424B62A3F00CEFFED /* Queries.swift in Sources */,
 				1B94D95624B637BE00CEFFED /* Resource.swift in Sources */,
 				1BBAC68124B758B600E05261 /* Attachment.swift in Sources */,
