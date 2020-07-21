@@ -32,7 +32,7 @@ public struct Analytics: Codable {
     ///
     /// Gateway
     ///
-    public var gateways: [String: Double]?
+    public var gateways: [String?: Double?]?
     
     ///
     /// Conversion

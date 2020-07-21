@@ -17,7 +17,7 @@ class Tests: XCTestCase {
         let exp = expectation(description: "Get analytics")
         
         NetworkManager
-            .prepare(token: keys["token"] ?? "no token")
+            .prepare(token: keys["token"] ?? "no token", debug: true)
             .target(.getAnalytics)
             .asObject(Analytics.self,
                       success: { analytics in
@@ -26,6 +26,7 @@ class Tests: XCTestCase {
                         XCTAssert(true)
                         exp.fulfill()
             }, error: { error in
+                print(error)
                 XCTAssert(false)
                 exp.fulfill()
             })
