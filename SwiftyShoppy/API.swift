@@ -124,7 +124,7 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     public var headers: [String : String]? {
         return [
-            "User-Agent": "SwiftyShoppy/1.1.5"
+            "User-Agent": "SwiftyShoppy/1.1.6"
         ]
     }
 }
