@@ -38,6 +38,7 @@ public struct Geo: Codable {
     public var ip: String?
     public var iso_code: String?
     public var country: String?
+    public var city: String?
     public var state: String?
     public var state_name: String?
     public var postal_code: String?
