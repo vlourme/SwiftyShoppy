@@ -12,7 +12,7 @@ import Foundation
 /// - When getting Product, it will return a array of objects
 /// - When updating or creating a Product, we need to send a array of Strings
 ///
-public enum Account: Codable {
+public enum Account: Codable, Hashable {
     case account(String)
     
     ///
