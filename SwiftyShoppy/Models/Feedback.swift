@@ -10,11 +10,18 @@ import Foundation
 ///
 /// Feedback
 ///
-public struct Feedback: Codable {
+public struct Feedback: Codable, Equatable {
     ///
     /// Public Initializer
     ///
     public init() {}
+    
+    ///
+    /// Equatable
+    ///
+    public static func == (lhs: Feedback, rhs: Feedback) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     ///
     /// Feedback ID

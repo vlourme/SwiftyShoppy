@@ -10,11 +10,18 @@ import Foundation
 ///
 /// Query structure
 ///
-public struct Query: Codable {
+public struct Query: Codable, Equatable {
     ///
     /// Public Initializer
     ///
     public init() {}
+    
+    ///
+    /// Equatable
+    ///
+    public static func == (lhs: Query, rhs: Query) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     ///
     /// Query identifier

@@ -11,11 +11,18 @@ import Foundation
 ///
 /// Order structure
 ///
-public struct Order: Codable {
+public struct Order: Codable, Equatable {
     ///
     /// Public Initializer
     ///
     public init() {}
+    
+    ///
+    /// Equatable
+    ///
+    public static func == (lhs: Order, rhs: Order) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     ///
     /// Identifiers

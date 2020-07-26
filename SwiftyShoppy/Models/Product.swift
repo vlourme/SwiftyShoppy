@@ -11,11 +11,18 @@ import Foundation
 ///
 /// Product model
 ///
-public struct Product: Codable {
+public struct Product: Codable, Equatable {
     ///
     /// Public Initializer
     ///
     public init() {}
+    
+    ///
+    /// Equatable
+    ///
+    public static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     ///
     /// Model

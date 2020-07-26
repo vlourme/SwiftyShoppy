@@ -10,11 +10,18 @@ import Foundation
 ///
 /// Attachment structure
 ///
-public struct Attachment: Codable {
+public struct Attachment: Codable, Equatable {
     ///
     /// Public Initializer
     ///
     public init() {}
+    
+    ///
+    /// Equatable
+    ///
+    public static func == (lhs: Attachment, rhs: Attachment) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     ///
     /// Attachment identifier
