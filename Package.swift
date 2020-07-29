@@ -17,6 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "14.0.0"))
+        .package(url: "https://github.com/marksands/BetterCodable", .upToNextMajor(from: "0.1.0"))
     ],
     targets: [
         .target(

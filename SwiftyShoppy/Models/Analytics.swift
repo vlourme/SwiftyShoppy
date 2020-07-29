@@ -5,11 +5,14 @@
 //  Created by Victor Lourme on 30/06/2020.
 //
 
+import BetterCodable
+
 public struct Analytics: Codable {
     ///
     /// Public Initializer
     ///
-    public init() {}
+    // public init() {}
+    // Note: disabled
     
     ///
     /// Identifiers
@@ -32,8 +35,7 @@ public struct Analytics: Codable {
     ///
     /// Gateway
     ///
-    // public var gateways: [String?: Double?]?
-    // MARK: This is not working.
+    @DefaultEmptyDictionary public var gateways: [String: Double]
     
     ///
     /// Conversion

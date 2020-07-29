@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1B1E98FF24D192580077BFF9 /* BetterCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1E98FE24D192580077BFF9 /* BetterCodable */; };
 		1B40548C24C76C5100026A68 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40548B24C76C5100026A68 /* Feedback.swift */; };
 		1B6199DC24ADF28D003FA43F /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6199DB24ADF28D003FA43F /* Agent.swift */; };
 		1B786BA424AB48050020FC50 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1B786BA324AB48050020FC50 /* Moya */; };
@@ -99,6 +100,7 @@
 			buildActionMask = 0;
 			files = (
 				1B786BA424AB48050020FC50 /* Moya in Frameworks */,
+				1B1E98FF24D192580077BFF9 /* BetterCodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +244,7 @@
 			name = SwiftyShoppy;
 			packageProductDependencies = (
 				1B786BA324AB48050020FC50 /* Moya */,
+				1B1E98FE24D192580077BFF9 /* BetterCodable */,
 			);
 			productName = SwiftyShoppy;
 			productReference = "SwiftyShoppy::SwiftyShoppy::Product" /* SwiftyShoppy.framework */;
@@ -283,6 +286,7 @@
 			mainGroup = OBJ_5;
 			packageReferences = (
 				1B786BA224AB48050020FC50 /* XCRemoteSwiftPackageReference "Moya" */,
+				1B1E98FD24D192580077BFF9 /* XCRemoteSwiftPackageReference "BetterCodable" */,
 			);
 			productRefGroup = OBJ_28 /* Products */;
 			projectDirPath = "";
@@ -618,6 +622,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1B1E98FD24D192580077BFF9 /* XCRemoteSwiftPackageReference "BetterCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marksands/BetterCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 		1B786BA224AB48050020FC50 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -629,6 +641,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B1E98FE24D192580077BFF9 /* BetterCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B1E98FD24D192580077BFF9 /* XCRemoteSwiftPackageReference "BetterCodable" */;
+			productName = BetterCodable;
+		};
 		1B786BA324AB48050020FC50 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1B786BA224AB48050020FC50 /* XCRemoteSwiftPackageReference "Moya" */;

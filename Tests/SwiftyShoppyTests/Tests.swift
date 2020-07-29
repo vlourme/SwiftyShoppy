@@ -22,6 +22,7 @@ class Tests: XCTestCase {
             .asObject(Analytics.self,
                       success: { analytics in
                         debugPrint("Total orders: \(analytics.totalOrders ?? -1)")
+                        debugPrint(analytics.gateways)
                         
                         XCTAssert(true)
                         exp.fulfill()
