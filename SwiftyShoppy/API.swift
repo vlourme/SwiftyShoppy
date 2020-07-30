@@ -23,6 +23,8 @@ extension Shoppy : TargetType, AccessTokenAuthorizable {
     
     public var path: String {
         switch self {
+            case let .getProfile(username):
+                return "/v1/public/seller/\(username)"
             case .getSettings:
                 return "/v1/settings"
             case .getAnalytics:

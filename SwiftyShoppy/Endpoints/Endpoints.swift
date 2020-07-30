@@ -10,6 +10,11 @@ import Foundation
 
 public enum Shoppy {
     ///
+    /// Get public profile
+    ///
+    case getProfile(_ username: String)
+    
+    ///
     /// Get settings (and user profile) from the private API
     /// (username, email, profile picture, crypto-wallet addresses, etc.)
     ///

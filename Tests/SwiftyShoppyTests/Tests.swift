@@ -10,6 +10,32 @@ import XCTest
 @testable import SwiftyShoppy
 
 class Tests: XCTestCase {
+    func testGetProfile() throws {
+        let exp = expectation(description: "Get profile")
+        
+        NetworkManager
+            .prepare(token: keys["token"] ?? "no token", debug: true)
+            .target(.getProfile("Username"))
+            .asObject(ProfileResponse.self,
+                      success: { response in
+                        if response.status == true {
+                            print("User exists")
+                            print(response.user ?? "Unknown")
+                        } else {
+                            print("User does not exists")
+                        }
+                        
+                        XCTAssert(true)
+                        exp.fulfill()
+            }, error: { error in
+                print(error)
+                XCTAssert(false)
+                exp.fulfill()
+            })
+        
+        wait(for: [exp], timeout: 10)
+    }
+    
     ///
     /// Get analytics
     ///
