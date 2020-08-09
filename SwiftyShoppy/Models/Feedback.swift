@@ -10,7 +10,7 @@ import Foundation
 ///
 /// Feedback
 ///
-public struct Feedback: Codable, Equatable {
+public struct Feedback: Codable, Equatable, Identifiable {
     ///
     /// Public Initializer
     ///

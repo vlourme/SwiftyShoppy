@@ -11,7 +11,7 @@ import Foundation
 ///
 /// Product model
 ///
-public struct Product: Codable, Equatable {
+public struct Product: Codable, Equatable, Identifiable {
     ///
     /// Public Initializer
     ///

@@ -10,7 +10,7 @@ import Foundation
 ///
 /// Query structure
 ///
-public struct Query: Codable, Equatable {
+public struct Query: Codable, Equatable, Identifiable {
     ///
     /// Public Initializer
     ///

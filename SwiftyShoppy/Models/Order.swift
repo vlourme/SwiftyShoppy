@@ -11,7 +11,7 @@ import Foundation
 ///
 /// Order structure
 ///
-public struct Order: Codable, Equatable {
+public struct Order: Codable, Equatable, Identifiable {
     ///
     /// Public Initializer
     ///

@@ -10,7 +10,7 @@ import Foundation
 ///
 /// Attachment structure
 ///
-public struct Attachment: Codable, Equatable {
+public struct Attachment: Codable, Equatable, Identifiable {
     ///
     /// Public Initializer
     ///
